@@ -15,7 +15,6 @@ Second, choose how you want to connect Shield PCB to a LCD Module. You have few 
 
 Then, simply solder all components and connectors following the labels on Shield PCB.
 
-### Shield Schematics
 
 ![Shield Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/shield-v2-rev-2.png)
 
@@ -40,9 +39,7 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
 
 
 
-## Sensor #1 Assembly Instructions
-
-### Assembly Steps
+## Sensor #1
 
  1. Sand down the ledge of the photodiodes next to the photodiode's lens. Be careful, not to damage the lens.
  2. Using PCB as a stencil, drill three 0.8mm holes in sensor face plate and countersink them with 1.8-2mm drill so the photodiode's lens fit flat in it.
@@ -63,15 +60,11 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
  10. Put a zip tie on a cable to prevent it from sliding out of the enclosure
  11. Close the lid, or glue it if you want.
 
-### Schematics
-
 ![Sensor #1 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor1-v1.png)
 
 
 
-## Sensor #2 Assembly Instructions
-
-### Assembly Steps
+## Sensor #2
 
  1. Sand down the ledge of the photodiode next to the photodiode's lens. Be careful, not to damage the lens.
  2. Using PCB as a stencil, drill 0.8mm hole in sensor face plate and countersink it with 1.8-2mm drill so the photodiode's lens fit flat in it.
@@ -85,8 +78,6 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
   - make sure that drilled opening is clean
  9. Solder socket connector according to the schematics
  10. Fix cable with a zip tie to prevent it from sliding out of the enclosure, close the lid
-
-### Schematics
 
 ![Sensor #1 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor1-v2.png)
 
