@@ -1,5 +1,3 @@
-## BOM
-
 ### Arduino Nano Compatible Board Shield
 
 - Atmega328p microcontroller (Arduino compatible) with firmware Version 2.3 uploaded
