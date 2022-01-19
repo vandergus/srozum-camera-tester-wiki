@@ -1,4 +1,4 @@
-### Arduino Nano Compatible Board Shield
+### Arduino Nano Compatible Shield Board
 
 - Atmega328p microcontroller (Arduino compatible) with firmware Version 2.3 uploaded
 - Shield PCB V2
