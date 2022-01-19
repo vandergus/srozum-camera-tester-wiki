@@ -1,4 +1,4 @@
-### Shield Board
+## Shield Board
 
 First, choose how you going to power the device:
 
@@ -17,7 +17,7 @@ Then, simply solder all components and connectors following the labels on Shield
 
 ### Shield Schematics
 
-![Shield Schematics](../assets/schematics/shield-v2-rev-2.png)
+![Shield Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/shield-v2-rev-2.png)
 
 
 
@@ -26,7 +26,7 @@ Then, simply solder all components and connectors following the labels on Shield
 - Solder components in place: rotary encoder and four buttons
 - Solder wires from a 9 pin JST connector starting with Black to "Gnd", Red to "Vcc", and so on.
 
-![Shield Schematics](../assets/schematics/keypad.png)
+![Shield Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/keypad.png)
 
 
 
@@ -35,7 +35,7 @@ Then, simply solder all components and connectors following the labels on Shield
 You have two identical Socket Connectors used for connecting Sensors. Simply follow the schematics on how to solder wires between 6 pin JST connector and 6 pin GX-16 Socket.
 
 
-![Socket Schematics](../assets/schematics/sockets.png)
+![Socket Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sockets.png)
 
 
 
@@ -46,7 +46,7 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
 
  1. Sand down the ledge of the photodiodes next to the photodiode's lens. Be careful, not to damage the lens.
  2. Using PCB as a stencil, drill three 0.8mm holes in sensor face plate and countersink them with 1.8-2mm drill so the photodiode's lens fit flat in it.
-   - ![Face Plate](../assets/schematics/sensor-face-plate.png)
+   - ![Face Plate](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor-face-plate.png)
    - Note that 0.8mm is a recommended size for a sensor opening. You may use 1mm drill bit, but larger than 1mm opening will affect accuracy of a measurements.
  3. Using PCB as a stensil, bend photodiode's legs at a proper distance, so the lens aligned with face plate openings.
  4. Solder photodiodes onto PCB so that distance between PCB and photodiode's back surface aproximately 4mm
@@ -65,7 +65,7 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
 
 ### Schematics
 
-![Sensor #1 Schematics](../assets/schematics/sensor1-v1.png)
+![Sensor #1 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor1-v1.png)
 
 
 
@@ -88,7 +88,7 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
 
 ### Schematics
 
-![Sensor #1 Schematics](../assets/schematics/sensor2-v1.png)
+![Sensor #1 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor1-v2.png)
 
 
 
@@ -96,7 +96,7 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
 
 Sensor #7 is a simple sensor used to test Flash Sync contacts of a camera. You can use some old extension cable from a flash unit. ID and pull-up resistors can fit inside of a GX-16 Socket.
 
-![Sensor #1 Schematics](../assets/schematics/sensor7.png)
+![Sensor #1 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor7.png)
 
 
 
