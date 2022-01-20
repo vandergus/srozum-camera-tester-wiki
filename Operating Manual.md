@@ -18,15 +18,17 @@ Then, depending on the selected Mode and type of camera you are testing, connect
 > **Although Tester supports sensors hot-swap, it is recommended to power off the Tester when connecting or disconnecting sensors**
 
 When the correct sensor is connected,  and the Tester is ready to take measurements, you'll see "Press Start" on the screen. Otherwise, it will tell "Not Ready".
-Similar projects that helped me to start my own
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-1.jpg)
 
 The first row of the screen is a Status Bar. It tells you what sensors are connected to the Sockets A and B, the short name of selected Test Mode, and on a righthand of a line, there is an indicator of a selector for a primary setting of the Mode.
 
+
 ## Settings Menu
 
 The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM memory.
+
+![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-14.jpg)
 
 **Speeds Range** lets you select between two sets of standard shutter speeds, depending on what camera you are testing - "New" (with speeds marked as 1/60, 1/125, etc.) or "Old" (with speeds like 1/50, 1/100).
 
@@ -66,4 +68,4 @@ In all modes, except "Average Series", once the first test was taken and results
 To change the Test Mode or Settings, press "Stop". Because during the Test all other controls are disabled.
 
 
-
+![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/images/product-small-3.jpg)
