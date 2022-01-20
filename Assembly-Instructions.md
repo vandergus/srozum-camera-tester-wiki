@@ -10,8 +10,8 @@ First, choose how you going to power the device:
 
 Second, choose how you want to connect Shield PCB to an LCD Module. You have a few options here:
 
- - You can sandwich Shield PCB and LCD Module together using provided standoffs. As you can see, the dimensions of a Shield PCB are the same as of LCD Module with matching holes for a 4 pin connector and brightness adjustment potentiometer. In that case, straighten 4 pins of the LCD module and make sure they fit into corresponding holes in Shield PCB. Note, you may need to adjust the distance between the LCD module and Shield PCB by either re-soldering the I2C module or by adjusting the height of standoffs.
- - If you plan to mount Shield PCB separately from LCD Module then solder provided 4 pin JST socket onto Shield PCB and replace LCD 4 pin headers with provided 4 pin JST connector with attached wires.
+ - You can sandwich Shield PCB and LCD Module together using standoffs. As you can see, the dimensions of a Shield PCB are the same as of LCD Module with matching holes for a 4 pin connector and brightness adjustment potentiometer. In that case, straighten 4 pins of the LCD module and make sure they fit into corresponding holes in Shield PCB. Note, you may need to adjust the distance between the LCD module and Shield PCB by either re-soldering the I2C module or by adjusting the height of standoffs.
+ - If you plan to mount Shield PCB separately from LCD Module then use provided 4 pin header and JST connector with attached wires.
 
 Then, simply solder all components and connectors following the labels on Shield PCB.
 

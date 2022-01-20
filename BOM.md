@@ -10,15 +10,12 @@
 - 2P F JST XH2.54 Connector
 - 2P M JST XH2.54 Connector with wires attached
 - Resistor 10K 0.125W x2
-- M3x14mm+3mm Standoff x4
-- M3x6 Pan head screw x4
-- M3 Nut x4
 
 ## LCD Unit
 
 - LCD2004 with I2C interface board
 - 4P M JST XH2.54 Connector with wires attached
-- Header Pin Connector 4P F (only included with assembled kit)
+- Header Pin Connector 4P F
 
 ## Keypad Unit
 
