@@ -79,7 +79,7 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
  9. Solder socket connector according to the schematics
  10. Fix cable with a zip tie to prevent it from sliding out of the enclosure, close the lid
 
-![Sensor #1 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor1-v2.png)
+![Sensor #1 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor2-v1.png)
 
 
 
