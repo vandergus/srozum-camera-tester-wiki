@@ -122,13 +122,11 @@ This mode was developed to measure the effective speed and efficiency of leaf sh
 
 As you know, for speeds above 1/100 exposure time measured on-axis (at the center of a frame) usually differs from a nominal speed. Some technicians at the beginning of their journey (used to be me, for example) are trying to achieve an exact match between measured and specified speed by bending springs, forcing levers, etc. Don't do this. That's because the speeds scale on leaf shutters is marked in effective speeds, which were measured and set by a manufacturer using special equipment.
 
-For example, service manual for Compur #00 shutters says that the nominal time measured on axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500. Which means that efficiency of a Compur #00 shutter is about 86% at 1/125 and 74% at 1/500.
+For example, service manual for Compur #00 shutters says that the nominal time measured on axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500.
 
-> Btw, did you know that efficiency of a focal-plane shutters is around 60% ?
+The diagram below illustrates the operating cycle of a leaf shutter and how effective exposure is determined. According to it, the formula of Te (effective exposure time) looks like this: Te = T2 + (T1+T3)/2.
 
 ![](https://github.com/srozum/film_camera_tester/blob/a9e86a9e29e1453685e43ca2b0b145c101124e74/assets/screenshots/screen-19.png)
-
-The diagram above illustrates the operating cycle of a leaf shutter and how effective exposure is determined. According to it, the formula of Te (effective exposure time) looks like this: Te = T2 + (T1+T3)/2.
 
 Although, the operating diagram of a real shutter doesn't look like a perfect trapezoid, after many laboratories tests few assumptions were made:
 
@@ -143,14 +141,16 @@ Sensor #3 with a laser diode should be used in this mode.
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-17.jpg)
 
-Example of measuring effective speed of a Synchro-Compur shutter.
+Example of measuring effective speed of a Synchro-Compur (Kodak Retina Reflex III) shutter at 1/250.
 
-- **"Tt"** - Total open time measured at the center of a shutter opening.
-- **"To"** - Fully open time measured at the very edge of a shutter opening, as accurate as beam of a laser diode allows.
+- **"Tt"** - Measurement #1: Total open time measured at the center of a shutter opening.
+- **"To"** - Measurement #2: Fully open time measured at the very edge of a shutter opening, as accurate as beam of a laser diode allows.
 - **"Te"** - Effective exposure time, calculated as Te = (Tt + To) / 2.
 - **"Se"** - Effective shutter speed (Te presented in a form "one over").
 - **"Er"** - calculated exposure error between calculated effective and target speed.
 - **"Eff"** - calculated efficiency of a shutter at a target speed.
+
+> Btw, did you know that efficiency of a focal-plane shutters is around 60% ?
 
 ## Light Source
 
