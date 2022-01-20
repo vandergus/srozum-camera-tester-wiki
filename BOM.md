@@ -1,7 +1,7 @@
 ## Arduino Nano Compatible Shield Board
 
 - Atmega328p microcontroller (Arduino compatible) with firmware Version 2.3 uploaded
-- Shield PCB V2
+- Shield PCB V2 Rev.2
 - Header Pin Connector 15P F x2
 - Active Buzzer 5V
 - Capacitor 220µF 50V x2
