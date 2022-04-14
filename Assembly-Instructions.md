@@ -79,8 +79,14 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
  9. Solder socket connector according to the schematics
  10. Fix cable with a zip tie to prevent it from sliding out of the enclosure, close the lid
 
-![Sensor #1 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor2-v1.png)
+![Sensor #2 Schematics](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor2-v1.png)
 
+
+## Sensor #3
+
+Sensor #3 is very similar to Sensor #2 but with LED. When this sensor is connected, tester will not use Light Unit to run tests.
+
+![Sensor #3 Schematics](https://github.com/srozum/film_camera_tester/blob/03439da3cf5c1e184cd822cfdb18fc5810760e6a/assets/schematics/sensor3-v1.png)
 
 
 ## Sensor #7

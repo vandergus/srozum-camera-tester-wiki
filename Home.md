@@ -24,7 +24,7 @@ Camera Tester uses Arduino Nano compatible board for processing. Arduino mounted
 
 Controls are mounted on Keypad PCB, and include Rotary Encoder, and "Mode", "Menu", "Start" and "Stop" buttons. Dedicated "Start" and "Stop" buttons are used to avoid using interrupts and increase the accuracy of measurements. Thus, during the test, all other controls are disabled. Keypad itself was designed in two form factors (further named as "vertical" and "horizontal") for the convenience of mounting Tester in various enclosures.
 
-For time-based measurements, you don't need a specialized light source, either a precise alignment, etc. The best choice of light source would be a standard desk lamp with an incandescent light bulb or bright LED panel placed in front of a camera in the proximity of 5-15cm. But, keep in mind, that photodiodes used for the Sensors are most sensitive to red to infrared light. Thus some bright white cheap LEDs (with color temp 6500K and poor CRI) won't work, because their spectrum lies mostly in the blue range.
+For time-based measurements, you don't need a specialized light source, either a precise alignment, etc. The best choice of light source would be a standard desk lamp with an incandescent light bulb or bright LED panel placed in front of a camera in the proximity of 5-15cm. Recommended brightness is about 15EV, however, the Tester will work within a range of 13-16EV and readings may vary slightly. But, keep in mind, that photodiodes used for the Sensors are most sensitive to red to infrared light. Thus some bright white cheap LEDs (with color temp 6500K and poor CRI) won't work, because their spectrum lies mostly in the blue range.
 
 ### Sockets
 
