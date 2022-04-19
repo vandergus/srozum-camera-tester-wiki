@@ -20,9 +20,9 @@ In this mode, using Sensor #1, you can test cameras with focal plane shutters, a
 
 > Note, Curtains travel time is presented using target distance set in settings “Frame Width” and “Frame Height”.
 
-> The reason why it is two separate modes, is to apply correct distance ratios
+> The reason why it is two separate modes, is to apply correct distance ratios based on Sensor #1 geometry.
 
-You can select between three different results representations:
+You can select between four different results representations:
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-6.jpg)
 
@@ -59,6 +59,16 @@ Helps to identify uneven travel of the curtains and issues caused by it.
 - **"To"** - travel time of an opening curtain.
 - **"Tc"** - travel time of a closing curtain.
 
+
+Curtains average travel time.
+
+Helps to identify how consistent is curtains travel time.
+
+- **"Mn"** - fastest travel time.
+- **"Av"** - average travel time.
+- **"Mx"** - maximum travel time.
+
+Left column shows results for opening curtain and right column is closing curtain.
 
 ## Average Series
 

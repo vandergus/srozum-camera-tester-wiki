@@ -1,4 +1,4 @@
-The current version of firmware is 2.3 and it has following test modes implemented.
+The current version of firmware is **2.4** and it has following test modes implemented.
 
 - Simple
 - Focal Vertical
@@ -30,10 +30,11 @@ The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-14.jpg)
 
-**Speeds Range** lets you select between two sets of standard shutter speeds, depending on what camera you are testing - "New" (with speeds marked as 1/60, 1/125, etc.) or "Old" (with speeds like 1/50, 1/100).
+**Speeds Range** lets you select between two sets of standard shutter speeds, depending on what camera you are testing - "New" (with speeds marked as 1/60, 1/125, etc.), "Old" (with speeds like 1/50, 1/100) or "Log" (with speeds like 1/128, 1/512).
 
 - "New" range goes from 8s speed to 1/8000.
 - "Old" range goes from 1s to 1/1000.
+- "Log" range goes from 8s speed to 1/8000. Speeds are power of 2, for testing electronic cameras controlled by MCU.
 
 **Test Series** sets the number of how many tests should be taken in average measuring modes before calculating and displaying the summary results.
 
