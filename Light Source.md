@@ -1,6 +1,6 @@
 To perform time-based measurements, you don't need a specialized light source. However, having a Light Unit attached to the Tester will greatly improve the comfort of using it. And having a calibrated light source will also increase the capabilities of the Tester.
 
-##Light Unit #1
+##Light Unit #1##
 
 You can build your own Light Unit, connect it to the Tester's socket marked as a "Light Unit", and let Tester to turn it On and Off when you press "Start" or "Stop" while running tests.
 
@@ -8,18 +8,8 @@ The schematic is very simple. Basically, you can connect anything what can be co
 
 ![](https://github.com/srozum/film_camera_tester/blob/2ea1c309da684a7f24941bc87bdb02ca9bf8ade0/assets/schematics/light-unit-1.png)
 
-### BOM
 
-- 6P M JST XH2.54 Connector with wires attached
-- 2P F JST XH2.54 Connector
-- 2P M JST XH2.54 Connector with wires attached
-- Resistor 1K 0.125W
-- Resistor 2.2K 0.125W
-- IRF520 MOSFET Driver Module x2
-- LED
-- Fan
-
-##Light Unit #2
+##Light Unit #2##
 
 ![](https://github.com/srozum/film_camera_tester/blob/67106fce64752653773c6c21b76f1bbce28fdd43/assets/images/light-unit-2-small-1.jpg)
 
@@ -39,11 +29,10 @@ For proper functioning, your Film Camera Tester should run firmware version [2.5
 
 Accuracy of the light output greatly depends on a quality of a power supply. It is recommneded to use 12V 2A (or higher) power supply like "Meanwell" or similar, where output voltage can be finely adjusted within +/-1V. When connected, adjust power supply voltage to exactly 12.5V, and make sure it stays the same whether Light Unit is on or off.
 
-Calibration was done using a Luminance meter. Below is a table of measured luminance on a surface of the screen.
+Calibration was done using a Luminance meter. Below is a table of measured luminance (cd/m2) on a surface of the screen.
 
 
 |EV   | K12.5  | K14.03|
-|     | cd/m2  | cd/m2 |
 |---- | ----   | ----  |
 |4    | 4      | 4.49  |
 |5    | 8      | 8.98  |
