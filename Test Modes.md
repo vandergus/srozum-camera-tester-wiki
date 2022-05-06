@@ -60,6 +60,8 @@ Helps to identify uneven travel of the curtains and issues caused by it.
 - **"Tc"** - travel time of a closing curtain.
 
 
+![](https://github.com/srozum/film_camera_tester/blob/2ea1c309da684a7f24941bc87bdb02ca9bf8ade0/assets/screenshots/screen-21.jpg)
+
 Curtains average travel time.
 
 Helps to identify how consistent is curtains travel time.
@@ -164,7 +166,16 @@ Example of measuring effective speed of a Synchro-Compur (Kodak Retina Reflex II
 
 ## Light Source
 
-To use this mode Light Unit #2 should be connected to the Tester. Mode sets PWM signal according to EV table of a Light Unit.
+In this mode you can test accuracy of a hand held light meters or light meters built into a cameras.
+
+Selector sets brightness of a Light Source within 4-16EV range according to selected K value. Display prompts what meter readings or camera settings could be with set level of brightness.
+
+![](https://github.com/srozum/film_camera_tester/blob/2ea1c309da684a7f24941bc87bdb02ca9bf8ade0/assets/screenshots/screen-20.jpg)
+
+In this example, when ISO set to 100 and apperture to F8, camera meter should show speed 1/125.
+
+> To use this mode Light Unit #2 should be connected to the Tester.
+
 
 
 

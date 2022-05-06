@@ -1,4 +1,4 @@
-The current version of firmware is **2.4** and it has following test modes implemented.
+The latest version of firmware is **2.5** and it has following test modes implemented.
 
 - Simple
 - Focal Vertical
@@ -47,6 +47,8 @@ For example, the service manual for a Pentax K1000 says that the edge-to-edge tr
 > The Tester automatically detects connected Sensor and thus knows what is a distance between photosensors.
 
 **Frame Height** similar to "Frame Width" but applying to focal plane shutters with vertical curtains travel direction.
+
+**K Value** lets you select value of calibration constant K between 12.5 and 14.03. It switches Light Source output according to calibration tables.
 
 **Sound On/Off** enables or disables buzzer sounds.
 
