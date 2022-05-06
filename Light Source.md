@@ -1,6 +1,6 @@
 To perform time-based measurements, you don't need a specialized light source. However, having a Light Unit attached to the Tester will greatly improve the comfort of using it. And having a calibrated light source will also increase the capabilities of the Tester.
 
-##Light Unit #1##
+## Light Unit #1
 
 You can build your own Light Unit, connect it to the Tester's socket marked as a "Light Unit", and let Tester to turn it On and Off when you press "Start" or "Stop" while running tests.
 
@@ -9,7 +9,7 @@ The schematic is very simple. Basically, you can connect anything what can be co
 ![](https://github.com/srozum/film_camera_tester/blob/2ea1c309da684a7f24941bc87bdb02ca9bf8ade0/assets/schematics/light-unit-1.png)
 
 
-##Light Unit #2##
+## Light Unit #2
 
 ![](https://github.com/srozum/film_camera_tester/blob/67106fce64752653773c6c21b76f1bbce28fdd43/assets/images/light-unit-2-small-1.jpg)
 
