@@ -21,8 +21,8 @@ The schematic is very simple. Basically, you can connect anything what can be co
 - LED light source, analog of Cree XHP 70.2
 - Color temperature varies within 2800K and 5000K
 - Dimensions:
- - Screen size 80x80mm
- - Unit size 10x10cm and 18cm deep
+  - Screen size 80x80mm
+  - Unit size 10x10cm and 18cm deep
 - Power requirements: DC 12.5V 1.2A
 
 For proper functioning, your Film Camera Tester should run firmware version [2.5](https://github.com/srozum/film_camera_tester/releases/tag/2.5).
