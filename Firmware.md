@@ -34,3 +34,4 @@ avrdude -p atmega328p -c usbasp -P usb  -D -U flash:w:firmware.hex:i -U eeprom:w
 
 If you are using Windows, please, search internet for the right commands.
 
+> **Remove Nano board from a Tester shield board during programming**
