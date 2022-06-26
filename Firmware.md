@@ -20,7 +20,7 @@ The second issue only could be fixed by using the ISP Programmer (or another ard
 - **settings.hex** - is a dump of EEPROM memory with default settings.
 
 
-###How to upload a firmware using another Arduino board as ISP programmer:
+### How to upload a firmware using another Arduino board as ISP programmer:
 
 Please, read that article on official website [https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP](https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP)
 
@@ -43,7 +43,7 @@ C:\<PATH TO AVRDUDE>\avrdude.conf -cavrisp -patmega328p -P<COM PORT> -b19200 -D 
 ```
 
 
-###How to upload a firmware using USBasp programmer:
+### How to upload a firmware using USBasp programmer:
 
 ```
 // erase and unlock the board
