@@ -1,4 +1,4 @@
-The latest version of firmware is **2.5** and it has following test modes implemented.
+The latest version of firmware is **2.6** and it has following test modes implemented.
 
 - Simple
 - Focal Vertical
@@ -30,7 +30,7 @@ The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-14.jpg)
 
-**Speeds Range** lets you select between two sets of standard shutter speeds, depending on what camera you are testing - "New" (with speeds marked as 1/60, 1/125, etc.), "Old" (with speeds like 1/50, 1/100) or "Log" (with speeds like 1/128, 1/512).
+**Speeds Range** lets you select between three sets of standard shutter speeds, depending on what camera you are testing - "New" (with speeds marked as 1/60, 1/125, etc.), "Old" (with speeds like 1/50, 1/100) or "Log" (with speeds like 1/128, 1/512).
 
 - "New" range goes from 8s speed to 1/8000.
 - "Old" range goes from 1s to 1/1000.
@@ -44,7 +44,7 @@ The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM
 
 For example, the service manual for a Pentax K1000 says that the edge-to-edge travel time should be 14ms, or 13.3ms over the distance of 34mm, or 12.5ms over the distance of 32mm. But more common to see travel times specified as edge-to-edge. Since the horizontal distance between the far most photodiodes of a Sensor #1 is 32mm,  it is required to do some simple math to find out the travel time over the target distance vs the sensor's space. By setting the "Frame Width", results of focal plane shutter Test Modes will be automatically re-calculated for a set distance.
 
-> The Tester automatically detects connected Sensor and thus knows what is a distance between photosensors.
+> The Tester automatically detects connected Sensor and thus knows what is a distance between photodiodes.
 
 **Frame Height** similar to "Frame Width" but applying to focal plane shutters with vertical curtains travel direction.
 

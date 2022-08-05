@@ -1,6 +1,6 @@
 ## Simple
 
-This basic mode allows you to quickly test shutters of different types at various speeds. It continuously measures exposure time and calculates an exposure error between measured and target speed. The target speed is either detected automatically as the nearest standard speed when the selector is set to "Auto", or the selected value is used.
+This basic mode allows you to quickly test cameras with shutters of different types at various speeds. It continuously measures exposure time and calculates an exposure error between measured and target speed. The target speed is either detected automatically as the nearest standard speed when the selector is set to "Auto", or the selected value is used.
 
 Either of the Sensors #1, #2 or #3 can be used in this mode since only the center photosensor is utilized.
 
@@ -12,17 +12,21 @@ Results displayed ona screen:
 - **"S"** - measured shutter speed (time presented in a form "one over").
 - **"Er"** - calculated exposure error between measured and target speed.
 
-When testing simple or leaf shutters the measured exposure time at the center of a frame is not an actual (or effective) speed. Especially it's applies for speeds above 1/60. For example, service manual for Compur shutters says that the nominal time measured on axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500.
+When testing simple or leaf shutters the measured exposure time at the center of a frame is not an actual (or effective) speed. Especially it's applies for speeds above 1/60. For example, service manual for Compur shutters says that the nominal time measured on axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500. Thus, some beginners repair people (used to be me) will try to get exact 1/250 speed by bending springs and levers until they damage the shutter unit.
+
+> Some old cameras have maximum aperture of f/4 of smaller. This, in combination with a big distance between lens and a focal plane where the sensor is placed, may cause problems during the tests. In this case, try to use powerfull flashlight instead of a built-in Light Unit.
 
 ## Focal Vertical / Horizizontal
 
 In this mode, using Sensor #1, you can test cameras with focal plane shutters, and get detailed results about exposure times at three points of a frame, opening and closing curtains travel times, and exposure error between measured and nearest standard speed.
 
+You can find curtains travel times for most cameras in a table on a page [Curtains Travel Times].
+
 > Note, Curtains travel time is presented using target distance set in settings “Frame Width” and “Frame Height”.
 
 > The reason why it is two separate modes, is to apply correct distance ratios based on Sensor #1 geometry.
 
-You can select between four different results representations:
+You can select between four different results representations (or modes):
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-6.jpg)
 
@@ -50,7 +54,7 @@ Shows how much are edges of a frame over or under exposed compared to the center
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-8.jpg)
 
-Curtains analysis.
+Curtains acceleration analysis.
 
 Helps to identify uneven travel of the curtains and issues caused by it.
 
@@ -64,7 +68,7 @@ Helps to identify uneven travel of the curtains and issues caused by it.
 
 Curtains average travel time.
 
-Helps to identify how consistent is curtains travel time.
+Helps to identify how consistent is curtains travel time by running series of a tests.
 
 - **"Mn"** - fastest travel time.
 - **"Av"** - average travel time.

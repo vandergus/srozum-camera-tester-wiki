@@ -1,6 +1,6 @@
 ![](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/images/product-small-1.jpg)
 
-## Features and characteristics (Firmware 2.5)
+## Features and characteristics (Firmware 2.6)
 
 - Measures exposure time at the center of a frame of simple (leaf) and focal plane shutters of 35mm and Medium Format (6x6 or 6x45 using adapter) cameras.
 - Measures timings of focal plane shutters with curtains traveling vertically or horizontally.

@@ -41,8 +41,8 @@ You have two identical Socket Connectors used for connecting Sensors. Simply fol
 
 ## Sensor #1
 
- 1. Sand down the ledge of the photodiodes next to the photodiode's lens. Be careful, not to damage the lens.
- 2. Using PCB as a stencil, drill three 0.8mm holes in the sensor faceplate and countersink them with a 1.8-2mm drill so the photodiode's lens fits flat in it.
+ 1. Remove the ledge of the photodiodes next to the photodiode's lens using a file or sand paper. Be careful, not to damage the lens.
+ 2. Using PCB as a stencil, drill three 0.8mm holes in the sensor faceplate and countersink them with a 1.8-2mm drill so the photodiode's lens fits flat into it.
    - ![Face Plate](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/schematics/sensor-face-plate.png)
    - Note that 0.8mm is a recommended size for a sensor opening. You may use 1mm drill bit, but larger than 1mm opening will affect accuracy of a measurements.
  3. Using PCB as a stencil, bend the photodiode's legs at a proper distance, so the lens is aligned with faceplate openings.

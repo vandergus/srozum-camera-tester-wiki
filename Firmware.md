@@ -56,7 +56,6 @@ avrdude -p atmega328p -c usbasp -P usb -D -U lfuse:w:0xFF:m -U hfuse:w:0xD7:m -U
 avrdude -p atmega328p -c usbasp -P usb  -D -U flash:w:firmware.hex:i -U eeprom:w:settings.hex:i
 ```
 
-> **Remove Nano board from a Tester shield board during programming**
 
-
+> **Always Remove Nano board from a Tester shield board during programming**
 
