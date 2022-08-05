@@ -22,6 +22,9 @@ Table below is combined from materials from SPT journal and various service manu
 | Olympus ||||||
 || OM1 | 14.5 | edge-to-edge
 | Canon ||||||
+|| F1 | 13.0 | edge-to-edge | +/-0.5ms | at 1/2000
+|| F1 | 11.0 | 32mm | +/-0.3ms | at 1/2000
+|| F1 N | 7.5 | 34mm | +/-0.2ms | at 1/2000
 || FTb | 13.0-14.5 | edge-to-edge
 || FT | 15.5 | edge-to-edge
 || FT-QL | 15.5 | edge-to-edge
