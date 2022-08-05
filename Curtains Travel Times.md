@@ -1,8 +1,6 @@
 Table below is combined from materials from SPT journal and various service manuals. If you don't see your camera in a list but know for sure what is curtains travel time should be, let me know and I'll add it to the table.
 
-> If you see two numbers, it usually means 2nd curtain limits since it adjusted slower
-
-> Any camera with Copal Square Shutter 7.0ms +/-0.3 edge-to-edge
+> If you see two numbers, it usually means 2nd curtain limits, since it have to be adjusted slower
 
 |Camera | Model   | Travel Time (ms)  | Distance (mm) | Tolerance | Notes |
 |------ | ------- | ------------ | -------- | --------- | ----- |
