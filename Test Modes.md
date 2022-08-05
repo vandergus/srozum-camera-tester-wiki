@@ -20,7 +20,7 @@ When testing simple or leaf shutters the measured exposure time at the center of
 
 In this mode, using Sensor #1, you can test cameras with focal plane shutters, and get detailed results about exposure times at three points of a frame, opening and closing curtains travel times, and exposure error between measured and nearest standard speed.
 
-You can find curtains travel times for most cameras in a table on a page [Curtains Travel Times].
+You can find curtains travel times for most cameras in a table on a page [[Curtains Travel Times]].
 
 > Note, Curtains travel time is presented using target distance set in settings “Frame Width” and “Frame Height”.
 
