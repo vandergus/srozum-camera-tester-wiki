@@ -1,25 +1,40 @@
 ![](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/images/product-small-1.jpg)
 
-## Features and characteristics (Firmware 2.6)
+## Features
 
 - Measures exposure time at the center of a frame of simple (leaf) and focal plane shutters of 35mm and Medium Format (6x6 or 6x45 using adapter) cameras.
+  - For leaf shutters of size #00 and #0 calculates estimated effective speed according to efficiency curve.
 - Measures timings of focal plane shutters with curtains traveling vertically or horizontally.
   - Results can be represented in a few different ways to help you detect different flaws in a shutter operation, such as curtains capping or tapering, uneven travel speed, etc.
+  - Automatically re-calculates curtains travel time according to selected frame width or height.
 - Measures delays between flash contact and shutter opening.
   - Automatically identifies X, M, or FP modes.
 - Takes a series of measurements, and calculates average stats.
   - Number of tests in series can be selected in the Settings menu between 3, 5, 10, or 20.
+- Allows to measure efficiency thus effective speed of a leaf shutters from size #00 and bigger.
 - Automatically detects the type of connected Sensors, and notifies you if wrong sensor is connected for a specific Mode.
 - Automatically detects target speed used to calculate the error.
   - Target speed can be set to "Auto" or pre-set from a list of standard speeds.
   - You also can select between two sets of standard speeds (Old style like 1/50 or New style like 1/60), depending on the type of shutter you are testing.
-- Automatically re-calculates curtains travel time according to selected frame width or height.
-- Range of measured speeds from 1s to 1/8000
-- Accuracy 10µs (measured in the pre-set environment, using a signal generator and specialized light source)
-  - Accuracy may vary during real-life measurements with different light sources and cameras.
 - Allows to check accuracy and calibrate light meters and light meters built into a cameras.
-  - Light Source brightness is adjustable within 4-16EV range
-  - Light Source can be switched between K12.5 and K14.03
+- Measures actual exposure at the film plane, which allows to test fully automatic, aperture or shutter priority cameras.
+
+
+### Characteristics
+
+- Range of measured speeds from 8s to 1/8000
+  - target speed can be presented using old, new or logarithmic sets of speeds.
+- Accuracy of time-based measurements
+  - ±10µs (measured in the pre-set environment, using a signal generator and specialized light source).
+- Accuracy of light integrating measurements
+  - ±0.1EV within 6-14EV range, although full range 4-16EV of a Light Unit can be used during the tests.
+  - Resolution -0.03/+0.01EV
+- Light Source
+  - brightness is adjustable within 4-16EV range
+  - brightness levels can be switched between K12.5 and K14.03.
+
+
+> Accuracy may vary during real-life measurements when different light sources are used, camera orientation and other factors.
 
 ## Main parts and components
 
@@ -34,13 +49,13 @@ For time-based measurements, you don't need a specialized light source, either a
 
 **Socket A** is the main socket for connecting Sensors which are used for time-based measurements. It uses 3 GPIO pins either as inputs or outputs, depending on the connected Sensor. Currently, sensors #1, #2, #3 can be connected to this socket and will be recognized by a Tester.
 
-**Socket B** is a secondary socket that has 1 GPIO pin and the other two pins are I2C bus pins. Currently, only sensor #7 can be used on this socket.
+**Socket B** is a secondary socket that has 1 GPIO pin and the other two pins are I2C bus pins. Currently, only sensors #6 and #7 can be used on this socket.
 
 > In the current revision I2C pins are directly connected to Socket B without a buffer. Thus, if you accidentally connect the wrong Sensor to Socket B it may cause the Tester to stop working.
 
 **Light Unit Socket** is used to control the Light Unit. One pin is used to turn on or off or regulate the brightness of a light source with a PWM signal, depending on the type of connected Light Unit. Another pin is used to turn on or off the Fan of a Light Unit. And a third pin is available for any kind of feedback sense implementations.
 
-> Unlike Socket A or B you cannot hot-swap Light Units. The light Unit must be connected before powering the Tester.
+> Unlike with Socket A or B you cannot hot-swap Light Units. The light Unit must be connected before powering the Tester.
 
 > Do not connect LED or any other load directly to Light Unit Socket pins. Its pins should be used as control signals only.
 
@@ -56,12 +71,14 @@ For time-based measurements, you don't need a specialized light source, either a
 
 **Sensor #3** - sensor with a single photodiode and a laser diode mounted against it, the construction you can see in other implementations of Arduino-based testers. This sensor is comfortable to use when you need to test a simple shutter detached from a camera. Also, this sensor is required for the "Leaf Efficiency" mode.
 
+**Sensor #6** - sensor to measure actual exposure at the film plane.
+
 **Sensor #7** - simple sensor with standard PC connector used to test flash sync or delay timings of a camera with simple or focal plane shutters. Instead of a PC connector, you may use a hot shoe connector.
 
 
 Schematics of each Sensor you can find on the "Assembly Instructions" page.
 
-More IDs (like #4, #5, #6, etc.) are reserved for future development. For example, a sensor for medium format focal plane shutters, a sensor for Leica-type cameras with non-removable pressure plate, and others.
+More IDs (like #4, #5, etc.) are reserved for future development. For example, a sensor for medium format focal plane shutters, a sensor for Leica-type cameras with non-removable pressure plate, and others.
 
 
 ### Light Units

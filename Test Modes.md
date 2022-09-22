@@ -1,18 +1,31 @@
-## Simple
+## Simple Shutters
 
 This basic mode allows you to quickly test cameras with shutters of different types at various speeds. It continuously measures exposure time and calculates an exposure error between measured and target speed. The target speed is either detected automatically as the nearest standard speed when the selector is set to "Auto", or the selected value is used.
 
 Either of the Sensors #1, #2 or #3 can be used in this mode since only the center photosensor is utilized.
 
-![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-4.jpg)
+Now, when testing simple or leaf shutters the measured exposure time at the center of a frame is not an actual (or effective) speed. Especially it applies for speeds above 1/60. For example, the service manual for Compur shutters says that the nominal time measured on the axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500. Thus, some beginners repair people (used to be me) will try to get exact 1/250 speed by bending springs and levers until they damage the shutter unit.
 
-Results displayed ona screen:
+This mode offers a feature specifically designed to help you while testing or adjusting leaf shutters of size #00 and #0 (17-24mm aperture). I've collected efficiency data of various recently serviced shutters, like Prontor, Compur, Synchro-Compur, Seikosha, Copal, etc. This data is used to build realistic "efficiency curve", and to interpolate effective speed of the shutter in test.
+
+> More about measuring efficiency you can read below in "Leaf Efficiency" mode description.
+
+On screenshots below you can see measurements results of Yashica Lynx-5000 shutter set at 1/500 and 1/1000 respectively.
+
+> Yashica Lynx-5000 one of the few cameras which shutter has reinforced blades and able to reach speeds as high as 1/1000.
+
+![](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/screenshots/screen-22.jpg)
+
+![](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/screenshots/screen-23.jpg)
+
+Results displayed on a screen:
 
 - **"T"** - measured exposure time. Automatically formatted in s/ms/µs.
 - **"S"** - measured shutter speed (time presented in a form "one over").
-- **"Er"** - calculated exposure error between measured and target speed.
+- **"Eff"** - shutter efficiency calculated using logarithmic interpolation and "effcicency curve" data.
+- **"S"** - effective shutter speed calculated based on measured time and estimated efficiency.
+- **"Er"** - calculated exposure error between measured and target speed. The target speed is either detected automatically as the nearest to effective speed, or the selected value is used.
 
-When testing simple or leaf shutters the measured exposure time at the center of a frame is not an actual (or effective) speed. Especially it's applies for speeds above 1/60. For example, service manual for Compur shutters says that the nominal time measured on axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500. Thus, some beginners repair people (used to be me) will try to get exact 1/250 speed by bending springs and levers until they damage the shutter unit.
 
 > Some old cameras have maximum aperture of f/4 of smaller. This, in combination with a big distance between lens and a focal plane where the sensor is placed, may cause problems during the tests. In this case, try to use powerfull flashlight instead of a built-in Light Unit.
 
@@ -78,7 +91,7 @@ Left column shows results for opening curtain and right column is closing curtai
 
 ## Average Series
 
-This mode is very similar to “Simple” mode, except that it takes a series of measurements and presents aggregated results after last test in series. Number of tests in series is set in Setting Menu. The target speed is either detected automatically as the nearest standard speed when the selector is set to "Auto", or the selected value is used.
+This mode is very similar to “Simple Shutters” mode, except that it takes a series of measurements and presents aggregated results after last test in series. Number of tests in series is set in Setting Menu. The target speed is either detected automatically as the nearest standard speed when the selector is set to "Auto", or the selected value is used.
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-9.jpg)
 

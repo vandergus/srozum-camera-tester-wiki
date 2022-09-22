@@ -89,6 +89,13 @@ Sensor #3 is very similar to Sensor #2 but with LED. When this sensor is connect
 ![Sensor #3 Schematics](https://github.com/srozum/film_camera_tester/blob/03439da3cf5c1e184cd822cfdb18fc5810760e6a/assets/schematics/sensor3-v1.png)
 
 
+## Sensor #6
+
+Sensor #6 to measure exposure value, and should be connected to Socket "B". It is very similar by it's construction to Sensor #2, and have light seals around the frame plate to block ambient light during the tests.
+
+![Sensor #6 Schematics](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/schematics/sensor6-v1.png)
+
+
 ## Sensor #7
 
 Sensor #7 is a simple sensor used to test Flash Sync contacts of a camera. You can use some old extension cable from a flash unit. ID and pull-up resistors can fit inside of a GX-16 Socket.

@@ -1,13 +1,13 @@
-The latest version of firmware is **2.6** and it has following test modes implemented.
+The latest version of firmware is **2.7** and it has following test modes implemented.
 
-- Simple
+- Simple Shutters
 - Focal Vertical
 - Focal Horizizontal
+- Light Source
 - Average Series
 - Flash Sync Simple
 - Flash Sync Focal
 - Leaf Efficiency
-- Light Source
 
 ## Selecting a Mode
 
@@ -30,6 +30,16 @@ The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM
 
 ![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-14.jpg)
 
+**K Value** lets you select value of calibration constant K between 12.5 and 14.03. It switches Light Source output according to calibration tables.
+
+**Frame Width** sets the target distance used to present curtains travel times. Curtains travel time can be presented as it was measured at a distance between far-most openings of a Sensor, or re-calculated over distance whichever is specified in service manual for a tested camera.
+
+For example, the service manual for a Pentax K1000 says that the edge-to-edge travel time should be 14ms, or 13.3ms over the distance of 34mm, or 12.5ms over the distance of 32mm. But more common to see travel times specified as edge-to-edge. Since the horizontal distance between the far most photodiodes of a Sensor #1 is 32mm,  it is required to do some simple math to find out the travel time over the target distance vs the sensor's space. By setting the "Frame Width", results of focal plane shutter Test Modes will be automatically re-calculated for a set distance.
+
+> The Tester automatically detects connected Sensor and thus knows what is a distance between photodiodes.
+
+**Frame Height** similar to "Frame Width" but applying to focal plane shutters with vertical curtains travel direction.
+
 **Speeds Range** lets you select between three sets of standard shutter speeds, depending on what camera you are testing - "New" (with speeds marked as 1/60, 1/125, etc.), "Old" (with speeds like 1/50, 1/100) or "Log" (with speeds like 1/128, 1/512).
 
 - "New" range goes from 8s speed to 1/8000.
@@ -40,29 +50,23 @@ The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM
 
 - Choises are 3, 5, 10, or 20 tests in a series.
 
-**Frame Width** sets the target distance used to present curtains travel times. Curtains travel time can be presented as it was measured at a distance between far-most openings of a Sensor, or re-calculated over distance whichever is specified in service manual for a tested camera.
-
-For example, the service manual for a Pentax K1000 says that the edge-to-edge travel time should be 14ms, or 13.3ms over the distance of 34mm, or 12.5ms over the distance of 32mm. But more common to see travel times specified as edge-to-edge. Since the horizontal distance between the far most photodiodes of a Sensor #1 is 32mm,  it is required to do some simple math to find out the travel time over the target distance vs the sensor's space. By setting the "Frame Width", results of focal plane shutter Test Modes will be automatically re-calculated for a set distance.
-
-> The Tester automatically detects connected Sensor and thus knows what is a distance between photodiodes.
-
-**Frame Height** similar to "Frame Width" but applying to focal plane shutters with vertical curtains travel direction.
-
-**K Value** lets you select value of calibration constant K between 12.5 and 14.03. It switches Light Source output according to calibration tables.
-
 **Sound On/Off** enables or disables buzzer sounds.
 
 To change settings in Settings Menu press the "Menu" button. Using a rotary encoder knob select which setting you want to edit and push the knob. Blinking symbol will appear next to the value, and you can change it by rotating a retary encoder knob. Pressing it again will store the selected value in a memory. To exit the Settings Menu, scroll down to the end of a list and select "Exit menu" item.
 
 ## Taking Measurements
 
-Open the camera back and place the Sensor into a frame opening. For the cameras with focal-plane shutters, the orientation of a Sensor doesn't matter since the Tester automatically detects the direction of the curtains. When testing cameras with a detachable lens it is recommended to remove the lens, otherwise set the aperture wide open.
+Open the camera back and place the Sensor into a frame opening. For the cameras with focal-plane shutters, the orientation of a Sensor doesn't matter since the Tester automatically detects the direction of the curtains.
 
 > Sensor #1 has a thread mount on its back in case you want to build a rig for holding it in an upright position.
 
 > Sensor #2 has a "+" symbol on its back to help position it in a center of a frame in case of testing half-frame cameras.
 
-Turn on the Light Source, unless it is a Light Unit controlled by the Tester, and place it in front of a camera approximately 5-10cm away.
+For time-based tests, when testing cameras with a detachable lens it is recommended to remove the lens, otherwise set the aperture wide open.
+
+Turn on the Light Source, unless it is a Light Unit controlled by the Tester, and place camera in front of it approximately 5-10cm away.
+
+For light integrating tests, set lens at infinity (also remove any filters if present), and place camera directly against the Light Unit screen so that it covers the whole field of view of a lens and a light meter, in case of point-and-shoot type of camera.
 
 When ready, press the "Start" button. At this moment the Tester should say "Running..." which means it is waiting for a shutter to be fired. Fire the shutter and if the test was successful you'll hear the "beep" and results will be printed on a screen immediately.
 
