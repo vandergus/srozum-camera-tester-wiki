@@ -91,7 +91,7 @@ Sensor #3 is very similar to Sensor #2 but with LED. When this sensor is connect
 
 ## Sensor #6
 
-Sensor #6 to measure exposure value, and should be connected to Socket "B". It is very similar by it's construction to Sensor #2, and have light seals around the frame plate to block ambient light during the tests.
+Sensor #6 used to measure exposure value, and should be connected to Socket "B". It is very similar by it's construction to Sensor #2, and have light seals around the frame plate to block ambient light during the tests.
 
 ![Sensor #6 Schematics](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/schematics/sensor6-v1.png)
 

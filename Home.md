@@ -15,8 +15,8 @@
 - Automatically detects the type of connected Sensors, and notifies you if wrong sensor is connected for a specific Mode.
 - Automatically detects target speed used to calculate the error.
   - Target speed can be set to "Auto" or pre-set from a list of standard speeds.
-  - You also can select between two sets of standard speeds (Old style like 1/50 or New style like 1/60), depending on the type of shutter you are testing.
-- Allows to check accuracy and calibrate light meters and light meters built into a cameras.
+  - You also can select between three sets of standard speeds (Old style like 1/50, New style like 1/60, or Logarithmic), depending on the type of shutter you are testing.
+- Allows to check accuracy and calibrate handheld light meters and light meters built into a cameras.
 - Measures actual exposure at the film plane, which allows to test fully automatic, aperture or shutter priority cameras.
 
 
@@ -71,7 +71,7 @@ For time-based measurements, you don't need a specialized light source, either a
 
 **Sensor #3** - sensor with a single photodiode and a laser diode mounted against it, the construction you can see in other implementations of Arduino-based testers. This sensor is comfortable to use when you need to test a simple shutter detached from a camera. Also, this sensor is required for the "Leaf Efficiency" mode.
 
-**Sensor #6** - sensor to measure actual exposure at the film plane.
+**Sensor #6** - sensor is designed to measure actual exposure at the film plane.
 
 **Sensor #7** - simple sensor with standard PC connector used to test flash sync or delay timings of a camera with simple or focal plane shutters. Instead of a PC connector, you may use a hot shoe connector.
 

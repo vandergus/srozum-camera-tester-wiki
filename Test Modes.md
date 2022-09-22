@@ -10,9 +10,8 @@ This mode offers a feature specifically designed to help you while testing or ad
 
 > More about measuring efficiency you can read below in "Leaf Efficiency" mode description.
 
-On screenshots below you can see measurements results of Yashica Lynx-5000 shutter set at 1/500 and 1/1000 respectively.
+On screenshots below you can see measurements results of a Yashica Lynx-5000 shutter set at 1/500 and 1/1000 respectively. Yashica Lynx-5000 one of the few cameras which shutter has reinforced blades and able to reach speeds as high as 1/1000, with open/close time as fast as 0.7ms. As you can see, tester does a good job by estimating effective speed based on a time measured at the center of a frame. However, it's up to you how you interpret the results.
 
-> Yashica Lynx-5000 one of the few cameras which shutter has reinforced blades and able to reach speeds as high as 1/1000.
 
 ![](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/screenshots/screen-22.jpg)
 
