@@ -1,9 +1,10 @@
-The latest version of firmware is **2.7** and it has following test modes implemented.
+The latest version of firmware is **2.8** and it has following test modes implemented.
 
 - Simple Shutters
 - Focal Vertical
 - Focal Horizizontal
 - Light Source
+- Exposure Error
 - Average Series
 - Flash Sync Simple
 - Flash Sync Focal

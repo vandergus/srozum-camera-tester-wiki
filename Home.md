@@ -2,8 +2,9 @@
 
 ## Features
 
+- Measures actual exposure at the film plane, which allows to test fully automatic, aperture or shutter priority cameras.
 - Measures exposure time at the center of a frame of simple (leaf) and focal plane shutters of 35mm and Medium Format (6x6 or 6x45 using adapter) cameras.
-  - For leaf shutters of size #00 and #0 calculates estimated effective speed according to efficiency curve.
+  - In version 2.7 only: For leaf shutters of size #00 and #0 calculates estimated effective speed according to efficiency curve.
 - Measures timings of focal plane shutters with curtains traveling vertically or horizontally.
   - Results can be represented in a few different ways to help you detect different flaws in a shutter operation, such as curtains capping or tapering, uneven travel speed, etc.
   - Automatically re-calculates curtains travel time according to selected frame width or height.
@@ -17,24 +18,26 @@
   - Target speed can be set to "Auto" or pre-set from a list of standard speeds.
   - You also can select between three sets of standard speeds (Old style like 1/50, New style like 1/60, or Logarithmic), depending on the type of shutter you are testing.
 - Allows to check accuracy and calibrate handheld light meters and light meters built into a cameras.
-- Measures actual exposure at the film plane, which allows to test fully automatic, aperture or shutter priority cameras.
 
 
 ### Characteristics
 
 - Range of measured speeds from 8s to 1/8000
-  - target speed can be presented using old, new or logarithmic sets of speeds.
+  - target speed can be presented using Old, New or Logarithmic sets of speeds.
 - Accuracy of time-based measurements
   - ±10µs (measured in the pre-set environment, using a signal generator and specialized light source).
 - Accuracy of light integrating measurements
-  - ±0.1EV within 6-14EV range, although full range 4-16EV of a Light Unit can be used during the tests.
-  - Resolution -0.03/+0.01EV
+  - ±0.05EV within 6-14EV range, although full range 4-16EV of a Light Unit can be used during the tests.
+  - Resolution 0.01EV
 - Light Source
   - brightness is adjustable within 4-16EV range
   - brightness levels can be switched between K12.5 and K14.03.
+  - Calibration accuracy: 5%
+  - Color temperature varies within 2800K and 5000K
+  - Screen size 80x80mm
 
 
-> Accuracy may vary during real-life measurements when different light sources are used, camera orientation and other factors.
+> Accuracy may vary during real-life measurements when different light sources are used, camera position and orientation and other factors.
 
 ## Main parts and components
 
@@ -71,7 +74,7 @@ For time-based measurements, you don't need a specialized light source, either a
 
 **Sensor #3** - sensor with a single photodiode and a laser diode mounted against it, the construction you can see in other implementations of Arduino-based testers. This sensor is comfortable to use when you need to test a simple shutter detached from a camera. Also, this sensor is required for the "Leaf Efficiency" mode.
 
-**Sensor #6** - sensor is designed to measure actual exposure at the film plane.
+**Sensor #6** - sensor is designed to measure exposure value at the film plane.
 
 **Sensor #7** - simple sensor with standard PC connector used to test flash sync or delay timings of a camera with simple or focal plane shutters. Instead of a PC connector, you may use a hot shoe connector.
 

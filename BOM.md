@@ -59,6 +59,19 @@
 - 24AWG 4 Core UL2464 Cable 0.8m
 - Heat Shrink Tubing 6mmx30mm
 
+## Sensor #6 (Exposure Sensor)
+
+- Sensor PCB V4
+- Photodiode TSL237
+- 3D Printed Enclosure parts (face plate, body and a lid)
+- 3D Printed Medium Format Adapter
+- Socket GX16x6 Male
+- 2x6mm Tapping Screw x2
+- Foam Pad 10x10mm
+- Zip Tie
+- 24AWG 4 Core UL2464 Cable 0.8m
+- Heat Shrink Tubing 6mmx30mm
+
 ## Sensor #7 (Flash Sync Sensor)
 
 - Cable with PC Connector

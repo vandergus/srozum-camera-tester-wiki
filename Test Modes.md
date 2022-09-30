@@ -4,11 +4,23 @@ This basic mode allows you to quickly test cameras with shutters of different ty
 
 Either of the Sensors #1, #2 or #3 can be used in this mode since only the center photosensor is utilized.
 
-Now, when testing simple or leaf shutters the measured exposure time at the center of a frame is not an actual (or effective) speed. Especially it applies for speeds above 1/60. For example, the service manual for Compur shutters says that the nominal time measured on the axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500. Thus, some beginners repair people (used to be me) will try to get exact 1/250 speed by bending springs and levers until they damage the shutter unit.
+![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-4.jpg)
 
-This mode offers a feature specifically designed to help you while testing or adjusting leaf shutters of size #00 and #0 (17-24mm aperture). I've collected efficiency data of various recently serviced shutters, like Prontor, Compur, Synchro-Compur, Seikosha, Copal, etc. This data is used to build realistic "efficiency curve", and to interpolate effective speed of the shutter in test.
+Results displayed on a screen:
+
+- **"T"** - measured exposure time. Automatically formatted in s/ms/µs.
+- **"S"** - measured shutter speed (time presented in a form "one over").
+- **"Er"** - calculated exposure error between measured and target speed. The target speed is either detected automatically as the nearest to effective speed, or the selected value is used.
+
+When testing simple or leaf shutters the measured exposure time at the center of a frame is not an actual (or effective) speed. Especially it's applies for speeds above 1/60. For example, service manual for Compur shutters says that the nominal time measured on axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500. Thus, some beginners repair people (used to be me) will try to get exact 1/250 speed by bending springs and levers until they damage the shutter unit.
 
 > More about measuring efficiency you can read below in "Leaf Efficiency" mode description.
+
+> Some old cameras have maximum aperture of f/4 of smaller. This, in combination with a big distance between lens and a focal plane where the sensor is placed, may cause problems during the tests. In this case, try to use powerfull flashlight instead of a built-in Light Unit.
+
+### Efficiency interpolation for leaf shutters of size #00 and #0
+
+In Firmware update 2.7 a feature specifically designed to help you while testing or adjusting leaf shutters of size #00 and #0 (17-24mm aperture) was added. I've collected efficiency data of various recently serviced shutters, like Prontor, Compur, Synchro-Compur, Seikosha, Copal, etc. This data is used to build realistic "efficiency curve", and to interpolate effective speed of the shutter in test.
 
 On screenshots below you can see measurements results of a Yashica Lynx-5000 shutter set at 1/500 and 1/1000 respectively. Yashica Lynx-5000 one of the few cameras which shutter has reinforced blades and able to reach speeds as high as 1/1000, with open/close time as fast as 0.7ms. As you can see, tester does a good job by estimating effective speed based on a time measured at the center of a frame. However, it's up to you how you interpret the results.
 
@@ -25,10 +37,9 @@ Results displayed on a screen:
 - **"S"** - effective shutter speed calculated based on measured time and estimated efficiency.
 - **"Er"** - calculated exposure error between measured and target speed. The target speed is either detected automatically as the nearest to effective speed, or the selected value is used.
 
+> This feature is only present in Firmware 2.7 and was removed in v2.8 to free some memory for "Exposure Error" mode. Version 2.7 was released anyways for those who are not going to build full system which includes a Light Unit.
 
-> Some old cameras have maximum aperture of f/4 of smaller. This, in combination with a big distance between lens and a focal plane where the sensor is placed, may cause problems during the tests. In this case, try to use powerfull flashlight instead of a built-in Light Unit.
-
-## Focal Vertical / Horizizontal
+## Focal Vertical / Horizontal
 
 In this mode, using Sensor #1, you can test cameras with focal plane shutters, and get detailed results about exposure times at three points of a frame, opening and closing curtains travel times, and exposure error between measured and nearest standard speed.
 
@@ -87,6 +98,48 @@ Helps to identify how consistent is curtains travel time by running series of a 
 - **"Mx"** - maximum travel time.
 
 Left column shows results for opening curtain and right column is closing curtain.
+
+
+
+## Exposure Error (EE)
+
+In this mode, using Sensor #6, you can measure difference between nominal exposure and actual exposure produced by a camera. However, the Tester is also measures the shutter speed at the same time. What makes this mode more like an "Apreture Error" (AE). Knowing the exposure error and shutter speed, it's much easier to detect wether camera has issues with aperture, shutter ot light meter.
+
+> Note that shutter speed is measured indirectly and thus not always accurate. If you see definitely incorrect numbers, just repeat the test.
+
+Start the Mode. Using selector set brightness of a Light Source within 4-16EV. On a camera, if testing in manual mode, set aperture and shutter speed according to selected light level and fire the shutter. When testing either fully automatic or aperture/shutter priority cameras, set ISO at 100.
+
+![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-27.jpg)
+
+Results displayed on a screen:
+
+- **"ISO"** - prompt that measurements should be performed at camera's settings set to ISO 100
+- **"K"** - indicator what light brightness levels are used. You should set one which corresponds to your camera's light meter settings. For most cameras after 1970 it's K14.03.
+- **"Exp"** - difference between nominal and measured exposure. If error is outside of ±2.5EV range, the **"- - -"** will be shown instead.
+- **"S"** - measured shutter speed.
+
+Tester reliably can measure within 6-15EV range when camera's settings are set accordingly, with shutter speeds up to 1/1000.
+
+> Sensor #6 must be used on Socket "B"
+
+> To use this mode Light Unit #2 should be connected to the Tester.
+
+### Calibration
+
+Sensor #6 have to be calibrated before the first use with Light Unit #2. For calibration you only need a camera with 50mm lens and good known aperture.
+
+https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-26.jpg
+
+- Set lens aperture at f/5.6 and camera's speed selector at "B".
+- Put Sensor into film frame opening. You might want to fix it with rubber band to have one free hand to perform next steps.
+- Place the camera lens at the center of a Light Unit screen, almost touching it. Fire the shutter and keep it open.
+- Press and hold rotary encoder knob for about 3 seconds untill "Calibrating..." appears on a screen.
+- Wait for 30 seconds for calibration to finish.
+
+The midpoint for calibration is chosen as f/5.6 at EV12. When calibration is done, set camera's speed selector at 1/125 and select EV12 light level. Fire the shutter and check if reslut is within acceptable range.
+
+> On some lens, because of some lag between mechanical linkages, same aperture settings may produce different results depending how you set it. For example, whether you set f/5.6 going from f/2 and up or from f/16 and down.
+
 
 ## Average Series
 
