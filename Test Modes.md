@@ -109,7 +109,7 @@ In this mode, using Sensor #6, you can measure difference between nominal exposu
 
 Start the Mode. Using selector set brightness of a Light Source within 4-16EV. On a camera, if testing in manual mode, set aperture and shutter speed according to selected light level and fire the shutter. When testing either fully automatic or aperture/shutter priority cameras, set ISO at 100.
 
-![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-27.jpg)
+![](![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-27.jpg))
 
 Results displayed on a screen:
 
@@ -122,13 +122,13 @@ Tester reliably can measure within 6-15EV range when camera's settings are set a
 
 > Sensor #6 must be used on Socket "B"
 
-> To use this mode Light Unit #2 should be connected to the Tester.
+> To use this mode Light Unit #2 is required.
 
 ### Calibration
 
 Sensor #6 have to be calibrated before the first use with Light Unit #2. For calibration you only need a camera with 50mm lens and good known aperture.
 
-https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-26.jpg
+![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-26.jpg)
 
 - Set lens aperture at f/5.6 and camera's speed selector at "B".
 - Put Sensor into film frame opening. You might want to fix it with rubber band to have one free hand to perform next steps.
