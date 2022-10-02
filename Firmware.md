@@ -32,13 +32,13 @@ COM PORT - port name where is you Arduino ISP programmer connected.
 
 ```
 // erase and unlock the board
-C:\<PATH TO AVRDUDE>\avrdude.exe avrdude.conf -cavrisp -patmega328p -P<COM PORT> -b19200 -e -Ulock:w:0x3F:m
+C:\<PATH TO AVRDUDE>\avrdude.exe -Cavrdude.conf -cavrisp -patmega328p -P<COM PORT> -b19200 -e -Ulock:w:0x3F:m
 
 // setting bootloader fuses
-C:\<PATH TO AVRDUDE>\avrdude.exe avrdude.conf -cavrisp -patmega328p -P<COM PORT> -b19200 -D -Ulfuse:w:0xFF:m -Uhfuse:w:0xD7:m -Uefuse:w:0xFF:m
+C:\<PATH TO AVRDUDE>\avrdude.exe -Cavrdude.conf -cavrisp -patmega328p -P<COM PORT> -b19200 -D -Ulfuse:w:0xFF:m -Uhfuse:w:0xD7:m -Uefuse:w:0xFF:m
 
 // uploading firmware and settings
-C:\<PATH TO AVRDUDE>\avrdude.exe avrdude.conf -cavrisp -patmega328p -P<COM PORT> -b19200 -D -Uflash:w:firmware.hex:i -Ueeprom:w:settings.hex:i
+C:\<PATH TO AVRDUDE>\avrdude.exe -Cavrdude.conf -cavrisp -patmega328p -P<COM PORT> -b19200 -D -Uflash:w:firmware.hex:i -Ueeprom:w:settings.hex:i
 
 ```
 
