@@ -80,3 +80,43 @@
 - Resistor 39K 0.125W
 - Heat Shrink Tubing 6mmx30mm
 
+## Light Unit #2 Rev.4
+
+- Light Unit #2 Control Board Rev.3
+  - PCB / Light Unit #2 Rev.3
+  - LD24AJTA (based on PT4115) LED Driver
+  - Header Pin Connector 6P M as LED driver mounts
+  - 2N2222A TO-92 NPN Transistor
+  - Diode 1N4001
+  - Resistor 2K 0.125W
+  - Resistor 2.2K 0.125W
+  - Resistor 3.9K 0.125W
+  - Resistor 4.7K 0.125W
+  - Capacitor 220µF 25V
+  - Capacitor 330µF 25V
+  - 2P F JST XH2.54 x2
+  - 2P M JST XH2.54 w/ 26AWG Wire
+  - 2P F JST PH2.0
+  - 6P M JST XH2.54 w/ 26AWG Wire
+- 3D Printed Front Panel Frame
+- 3D Printed Reflector Mount Frame
+- 3D Printed Reflector
+- 3D Printed LED Mount
+- Diffuser Silky White 88x88 6mm thick
+- Fresnel Lens 50mm F40mm
+- Epileds XHP7070.2 12V 3000K LED
+- 10W Heatsink With Fan
+- 2P M JST PH2.0 w/ 22AWG 15cm Wire
+- M3x20 Hex Screw Black x4
+- M3x65 Threaded Rod x4
+- M3 Nut x12
+- M3x6 1mm Nylon Washer x8
+- Nylon Spacer M3x15 x4
+
+
+
+
+
+
+
+

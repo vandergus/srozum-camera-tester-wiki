@@ -9,3 +9,12 @@ If you would like to build similar setup for yourself or already own a Film Came
 Templates with all dimmensions needed to drill holes and cutouts for LCD screen and Keypads you can find [here](https://github.com/srozum/film_camera_tester/tree/master/assets/templates)
 
 Enclosure, used in my project, could be found on Amazon, AliExpres, etc. under different brands like "YaeCCC", "Zulkit", "Fielect" and many others. Just search for "electronic enclosures blue metal project box"
+
+
+![Horizontal enclosure with vertical keypad](https://github.com/srozum/film_camera_tester/blob/7cbce8052d5402e7cd7af5e4a7aec494a4e44460/assets/images/enclosure-2.jpg)
+
+
+![Veritcal enclosure with horizontal keypad](https://github.com/srozum/film_camera_tester/blob/7cbce8052d5402e7cd7af5e4a7aec494a4e44460/assets/images/enclosure-1.jpg)
+
+
+

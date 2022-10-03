@@ -27,9 +27,9 @@ The schematic is very simple. Basically, you can connect anything what can be co
 
 For proper functioning, your Film Camera Tester should run firmware version [2.5](https://github.com/srozum/film_camera_tester/releases/tag/2.5) or higher.
 
-Accuracy of the light output greatly depends on a quality of a power supply. It is recommended to use 12V 2A (or higher) power supply like "Mean Well" or similar, where output voltage can be finely adjusted within +/-1V. When connected, adjust power supply voltage to exactly 12.5V, and make sure it stays the same whether Light Unit is on or off.
+Accuracy of the light output greatly depends on a quality of a power supply. It is recommended to use 12V 2A (or higher) power supply like "Mean Well" or similar, where output voltage can be finely adjusted within +/-1V. When connected, adjust power supply voltage to exactly 12.5V, and make sure it stays the same whether Light Unit is on or off. Check the light value at EV12/K12.5 using an illumimnance meter or light meter (also calibrated at K12.5), and adjust voltage if needed.
 
-Calibration was done using a Luminance meter. Below is a table of measured luminance (cd/m2) on a surface of the screen.
+Calibration was done using a Luminance meter with a probe placed directly against the screen. Below is a table of measured luminance (cd/m2) on a surface of the screen.
 
 
 |EV   | K12.5  | K14.03|
