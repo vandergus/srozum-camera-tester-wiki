@@ -36,8 +36,13 @@
 
 ## Sensor #1 (Diagonal Sensor)
 
-- Sensor PCB V1
+- Sensor PCB
+  - V1 has 32x22mm spacing between outmost phodotiodes
+  - V2 has 32x20mm spacing
 - Photodiode SIC553-04 x3
+  - Light To Logic converter. This is what used in those "Laser Sensor" modules.
+  - ![Laser Sensor](https://github.com/srozum/film_camera_tester/blob/ff70038ed548a19df9affb2cfab41a057fedca4c/assets/images/laser%20sensor%20module.jpeg)
+  - [Datasheet](https://github.com/srozum/film_camera_tester/blob/ff70038ed548a19df9affb2cfab41a057fedca4c/assets/datasheets/SIC553-04.pdf)
 - 3D Printed Enclosure parts (face plate, body and a lid)
 - 2x6mm Tapping Screw x2
 - Zip Tie
@@ -63,6 +68,8 @@
 
 - Sensor PCB V4
 - Photodiode TSL237
+  - Light To Frequency converter.
+  - [Datasheet](https://github.com/srozum/film_camera_tester/blob/ff70038ed548a19df9affb2cfab41a057fedca4c/assets/datasheets/TSL237.pdf)
 - 3D Printed Enclosure parts (face plate, body and a lid)
 - 3D Printed Medium Format Adapter
 - Socket GX16x6 Male
@@ -77,14 +84,15 @@
 - Cable with PC Connector
 - Socket GX16x6 Male
 - Resistor 10K 0.125W
-- Resistor 39K 0.125W
+- Resistor 39K (closest standard to it) 0.125W
 - Heat Shrink Tubing 6mmx30mm
 
 ## Light Unit #2 Rev.4
 
 - Light Unit #2 Control Board Rev.3
   - PCB / Light Unit #2 Rev.3
-  - LD24AJTA (based on PT4115) LED Driver
+  - LD24AJTA (based on PT4115) LED Driver.
+    - [Datasheet](https://github.com/srozum/film_camera_tester/blob/ff70038ed548a19df9affb2cfab41a057fedca4c/assets/datasheets/PT4115E.pdf)
   - Header Pin Connector 6P M as LED driver mounts
   - 2N2222A TO-92 NPN Transistor
   - Diode 1N4001
@@ -102,9 +110,11 @@
 - 3D Printed Reflector Mount Frame
 - 3D Printed Reflector
 - 3D Printed LED Mount
-- Diffuser Silky White 88x88 6mm thick
-- Fresnel Lens 50mm F40mm
+- Diffuser "Silky White" 88x88 6mm thick
+  - acrylic sheet, glossy on one side (facing inwards), matte on other side (facing outwards)
+- Acrylic Fresnel Lens diameter 50mm, focal length 40mm
 - Epileds XHP7070.2 12V 3000K LED
+  - chinese analog of Cree XHP70.2
 - 10W Heatsink With Fan
 - 2P M JST PH2.0 w/ 22AWG 15cm Wire
 - M3x20 Hex Screw Black x4

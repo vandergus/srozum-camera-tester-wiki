@@ -14,7 +14,7 @@ Table below is combined from materials from SPT journal and various service manu
 || ES | 12.5 | 36mm
 || ES; ESII | 11.5 | 32 |  | Set curtain speeds at 1/1000  SPT
 || ME | 6 | 20 |  | SPT
-|| ME Super | 5.6 | 20 |  | Because of the 1/2000 top speed and 1/125 flash speed, the travel times are faster than in other Seiko shutters  SPT
+|| ME Super | 6.5 | 21 |  | Because of the 1/2000 top speed and 1/125 flash speed, the travel times are faster than in other Seiko shutters  SPT
 || MX | 12.2-12.3 | 32 |  | SPT
 || Super Program; Super A | 5.6 | 20 |  | Old style with 1/125 X-sync speed; alternatively 6.8 mS @ 24 mm  SPT
 || Super Program; Super A | 5 | 20 |  | Newer style with 1/250 X-sync; alternatively 6.0 mS @ 24 mm  SPT
