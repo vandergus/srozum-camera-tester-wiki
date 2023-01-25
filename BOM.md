@@ -13,7 +13,7 @@
 
 ## LCD Unit
 
-- LCD2004 with I2C interface board
+- LCD2004A with I2C interface board based on PCF8574T chip, which has default address 0x27
 - 4P M JST XH2.54 Connector with wires attached
 - Header Pin Connector 4P F
 
