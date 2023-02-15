@@ -161,6 +161,46 @@ Helps to identify how consistent is curtains travel time by running series of a 
 
 Left column shows results for opening curtain and right column is closing curtain.
 
+## Light Source
+
+In this mode you can test accuracy of a hand held light meters or light meters built into a cameras.
+
+Because of the Color Correction Factor of LED, old light meters like celenium meters, photoresistors or LDR, and some photodiodes read exactly 1 stop lower. More modern light meters, including digital cameras, read LED lights correctly.
+
+Thus, to avoid confusion, in Firmware v2.9 the new "EV Shift" settings menu item was added. Before testing the camera or light meter you have to identify what type of photodetector it uses and set Light Source EV Shift accordingly.
+
+> Big thanks to Peter Woodford who did numerous tests and helped to identify behaviour of various light meters.
+
+Selector sets brightness of a Light Source within 5-16EV range according to selected K Value and EV Shift. Display prompts what meter readings or camera settings could be with set level of brightness.
+
+In this example, K Value is 12.5 and EV Shift is 0EV, so the luminance value on a screen should be 1024 cd/m^2. When ISO set to 100 and apperture to F8, camera equipped with photodiode meter and calibrated to K12.5 should show speed 1/125.
+
+![](https://github.com/srozum/film_camera_tester/blob/2ea1c309da684a7f24941bc87bdb02ca9bf8ade0/assets/screenshots/screen-20.jpg)
+
+In this example, K Value is 14.03 and EV Shift is +1EV, so the luminance value on a screen should be 8.98 cd/m^2. When ISO set to 100 and apperture to F8, camera equipped with LDR meter and calibrated to K14.03 should show speed 2s.
+
+![](https://github.com/srozum/film_camera_tester/blob/fd1b6cfd43a40cea0739f01f470084609dd6e7c8/assets/screenshots/screen-29.jpg)
+
+Below is a luminance values table depending on what K Value and EV Shift selected in settings menu.
+
+|EV   | K12.5 | K12.5 +1 | K14.03 | K14.03 +1 |
+|---- | ----  | ----     | ----   | ----      |
+|5    | 4     | 8        | 4.49   | 8.98      |
+|6    | 8     | 16       | 8.98   | 17.96     |
+|7    | 16    | 32       | 17.96  | 35.92     |
+|8    | 32    | 64       | 35.92  | 71.8      |
+|9    | 64    | 128      | 71.8   | 143.65    |
+|10   | 128   | 256      | 143.65 | 287.3     |
+|11   | 256   | 512      | 287.3  | 575       |
+|12   | 512   | 1024     | 575    | 1149      |
+|13   | 1024  | 2048     | 1149   | 2299      |
+|14   | 2048  | 4090     | 2299   | 4595      |
+|15   | 4090  | 8190     | 4595   | 9195      |
+|16   | 8190  | 16390    | 9195   | 18390     |
+
+
+> To use this mode Light Unit #2 should be connected to the Tester.
+
 
 
 ## Exposure Error (EE)
@@ -296,47 +336,6 @@ Example of measuring effective speed of a Synchro-Compur (Kodak Retina Reflex II
 - **"Eff"** - calculated efficiency of a shutter at a target speed.
 
 > Btw, did you know that efficiency of a focal-plane shutters is around 60% ?
-
-## Light Source
-
-In this mode you can test accuracy of a hand held light meters or light meters built into a cameras.
-
-Because of the Color Correction Factor of LED, old light meters like celenium meters, photoresistors or LDR, and some photodiodes read exactly 1 stop lower. More modern light meters, including digital cameras, read LED lights correctly.
-
-Thus, to avoid confusion, in Firmware v2.9 the new "EV Shift" settings menu item was added. Before testing the camera or light meter you have to identify what type of photodetector it uses and set Light Source EV Shift accordingly.
-
-> Big thanks to Peter Woodford who did numerous tests and helped to identify behaviour of various light meters.
-
-Selector sets brightness of a Light Source within 5-16EV range according to selected K Value and EV Shift. Display prompts what meter readings or camera settings could be with set level of brightness.
-
-In this example, K Value is 12.5 and EV Shift is 0EV, so the luminance value on a screen should be 1024 cd/m^2. When ISO set to 100 and apperture to F8, camera equipped with photodiode meter and calibrated to K12.5 should show speed 1/125.
-
-![](https://github.com/srozum/film_camera_tester/blob/2ea1c309da684a7f24941bc87bdb02ca9bf8ade0/assets/screenshots/screen-20.jpg)
-
-In this example, K Value is 14.03 and EV Shift is +1EV, so the luminance value on a screen should be 8.98 cd/m^2. When ISO set to 100 and apperture to F8, camera equipped with LDR meter and calibrated to K14.03 should show speed 2s.
-
-![](https://github.com/srozum/film_camera_tester/blob/fd1b6cfd43a40cea0739f01f470084609dd6e7c8/assets/screenshots/screen-29.jpg)
-
-Below is a luminance values table depending on what K Value and EV Shift selected in settings menu.
-
-|EV   | K12.5 | K12.5 +1 | K14.03 | K14.03 +1 |
-|---- | ----  | ----     | ----   | ----      |
-|5    | 4     | 8        | 4.49   | 8.98      |
-|6    | 8     | 16       | 8.98   | 17.96     |
-|7    | 16    | 32       | 17.96  | 35.92     |
-|8    | 32    | 64       | 35.92  | 71.8      |
-|9    | 64    | 128      | 71.8   | 143.65    |
-|10   | 128   | 256      | 143.65 | 287.3     |
-|11   | 256   | 512      | 287.3  | 575       |
-|12   | 512   | 1024     | 575    | 1149      |
-|13   | 1024  | 2048     | 1149   | 2299      |
-|14   | 2048  | 4090     | 2299   | 4595      |
-|15   | 4090  | 8190     | 4595   | 9195      |
-|16   | 8190  | 16390    | 9195   | 18390     |
-
-
-> To use this mode Light Unit #2 should be connected to the Tester.
-
 
 
 
