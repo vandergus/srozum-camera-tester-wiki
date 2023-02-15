@@ -1,9 +1,10 @@
-This is Operation Manual for the Film Camera Tester running on Firmware **v2.7**. It has following test modes implemented:
+This is Operation Manual for the Film Camera Tester running on Firmware **v2.8**. It has following test modes implemented:
 
 - [Simple Shutters](#simple-shutters)
 - [Focal Vertical](#focal-vertical--horizontal)
 - [Focal Horizontal](#focal-vertical--horizontal)
 - [Light Source](#light-source)
+- [Exposure Error](#exposure-error)
 - [Average Series](#average-series)
 - [Flash Sync Simple](#flash-sync-simple)
 - [Flash Sync Focal](#flash-sync-focal)
@@ -28,9 +29,13 @@ The first row of the screen is a Status Bar. It tells you what sensors are conne
 
 The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM memory.
 
-![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-14.jpg)
+![](https://github.com/srozum/film_camera_tester/blob/fd1b6cfd43a40cea0739f01f470084609dd6e7c8/assets/screenshots/screen-28.jpg)
 
 **K Value** lets you select value of calibration constant K between 12.5 and 14.03. It switches Light Source output according to calibration tables.
+
+**EV Shift** lets you select Light Source brightness levels shifted between "0EV" and "+1EV" depending on what type of light meter you are testing.
+
+If camera in test uses celenium or LDR photoelements you want to set "+1EV" to avoid confusing during the tests. What it basically means, is that in "+1EV" mode while you change Light Source brightness between 5..16EV, the actual brightness of a Light Source is 6..17EV. But because of old light meters read LED light 1 stop lower, both Light Meter readings and brigntess level indicated by the Tester will align.
 
 **Frame Width** sets the target distance used to present curtains travel times. Curtains travel time can be presented as it was measured at a distance between far-most openings of a Sensor, or re-calculated over distance whichever is specified in service manual for a tested camera.
 
@@ -77,25 +82,16 @@ To change the Test Mode or Settings, press "Stop". Because during the Test all o
 
 ## Simple Shutters
 
-This basic mode allows you to quickly test cameras with shutters of different types at various speeds, as well as to get the efficiency interpolation for leaf shutters of size #00 and #0 (17-24mm aperture). I've collected efficiency data of various recently serviced shutters, like Prontor, Compur, Synchro-Compur, Seikosha, Copal, etc. This data is used to build realistic "efficiency curve", and to interpolate effective speed of the shutter in test.
-
-In this mode Tester continuously measures exposure time, calculates effective speed and exposure error between effective and target speed. The target speed is either detected automatically as the nearest standard speed when the selector is set to "Auto", or the selected value is used.
+This basic mode allows you to quickly test cameras with shutters of different types at various speeds. It continuously measures exposure time and calculates an exposure error between measured and target speed. The target speed is either detected automatically as the nearest standard speed when the selector is set to "Auto", or the selected value is used.
 
 Either of the Sensors #1, #2 or #3 can be used in this mode since only the center photosensor is utilized.
 
-On screenshots below you can see measurements results of a Yashica Lynx-5000 shutter set at 1/500 and 1/1000 respectively. Yashica Lynx-5000 one of the few cameras which shutter has reinforced blades and able to reach speeds as high as 1/1000, with open/close time as fast as 0.7ms. As you can see, tester does a good job by estimating effective speed based on a time measured at the center of a frame. However, it's up to you how you interpret the results.
-
-
-![](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/screenshots/screen-22.jpg)
-
-![](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/screenshots/screen-23.jpg)
+![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-4.jpg)
 
 Results displayed on a screen:
 
 - **"T"** - measured exposure time. Automatically formatted in s/ms/µs.
 - **"S"** - measured shutter speed (time presented in a form "one over").
-- **"Eff"** - shutter efficiency calculated using logarithmic interpolation and "effcicency curve" data.
-- **"S"** - effective shutter speed calculated based on measured time and estimated efficiency.
 - **"Er"** - calculated exposure error between measured and target speed. The target speed is either detected automatically as the nearest to effective speed, or the selected value is used.
 
 When testing simple or leaf shutters the measured exposure time at the center of a frame is not an actual (or effective) speed. Especially it's applies for speeds above 1/60. For example, service manual for Compur shutters says that the nominal time measured on axis (at the center of a frame) for speed 1/125 should be 8.57ms instead of 10ms, or 2.7ms instead of 2ms for speed 1/500. Thus, some beginners repair people (used to be me) will try to get exact 1/250 speed by bending springs and levers until they damage the shutter unit.
@@ -164,6 +160,49 @@ Helps to identify how consistent is curtains travel time by running series of a 
 - **"Mx"** - maximum travel time.
 
 Left column shows results for opening curtain and right column is closing curtain.
+
+
+
+## Exposure Error (EE)
+
+In this mode, using Sensor #6, you can measure difference between nominal exposure and actual exposure produced by a camera. However, the Tester is also measures the shutter speed at the same time. What makes this mode more like an "Apreture Error" (AE). Knowing the exposure error and shutter speed, it's much easier to detect wether camera has issues with aperture, shutter ot light meter.
+
+> Note that shutter speed is measured indirectly and thus not always accurate. If you see definitely incorrect numbers, just repeat the test.
+
+Start the Mode, using selector set brightness of a Light Source within 5-16EV. On a camera, if testing in manual mode, set aperture and shutter speed according to selected light level and fire the shutter. While testing manual cameras it doesn't matter what settings are selected for the Light Source, either K value or EV Shift.
+
+When testing either fully automatic or aperture/shutter priority cameras, camera should be set at ISO 100, and Light Source settings, like K Value and EV Shift, should be set accroding to the type of Light Meter built into a camera.
+
+![](![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-27.jpg))
+
+Results displayed on a screen:
+
+- **"ISO"** - prompt that measurements should be performed at camera's settings set to ISO 100
+- **"K"** - indicator what light brightness levels are used. You should set one which corresponds to your camera's light meter settings. For most cameras after 1970 it's K14.03.
+- **"Exp"** - difference between nominal and measured exposure. If error is outside of ±2.5EV range, the **"- - -"** will be shown instead.
+- **"S"** - measured shutter speed.
+
+Tester reliably can measure within 6-15EV range when camera's settings are set accordingly, with shutter speeds up to 1/1000.
+
+> Sensor #6 must be used on Socket "B"
+
+> To use this mode Light Unit #2 is required.
+
+### Calibration
+
+Sensor #6 have to be calibrated before the first use with Light Unit #2. For calibration you only need a camera with 50mm lens and good known aperture.
+
+![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-26.jpg)
+
+- Set lens aperture at f/5.6 and camera's speed selector at "B".
+- Put Sensor into film frame opening. You might want to fix it with rubber band to have one free hand to perform next steps.
+- Place the camera lens at the center of a Light Unit screen, almost touching it. Fire the shutter and keep it open.
+- Press and hold rotary encoder knob for about 3 seconds untill "Calibrating..." appears on a screen.
+- Wait for about a minute for calibration to finish.
+
+The midpoint for calibration is chosen as f/5.6 at EV12. When calibration is done, set camera's speed selector at 1/125 and select EV12 light level. Fire the shutter and check if reslut is within acceptable range.
+
+> On some lens, because of some lag between mechanical linkages, same aperture settings may produce different results depending how you set it. For example, whether you set f/5.6 going from f/2 and up or from f/16 and down.
 
 
 ## Average Series
@@ -262,28 +301,38 @@ Example of measuring effective speed of a Synchro-Compur (Kodak Retina Reflex II
 
 In this mode you can test accuracy of a hand held light meters or light meters built into a cameras.
 
-Selector sets brightness of a Light Source within 4-16EV range according to selected K value. Display prompts what meter readings or camera settings could be with set level of brightness.
+Selector sets brightness of a Light Source within 5-16EV range according to selected K value. Display prompts what meter readings or camera settings could be with set level of brightness.
+
+In this example, K Value is 12.5 and EV Shift is 0EV, so the luminance value on a screen should be 1024 cd/m^2. When ISO set to 100 and apperture to F8, camera equipped with photodiode meter and calibrated to K12.5 should show speed 1/125.
 
 ![](https://github.com/srozum/film_camera_tester/blob/2ea1c309da684a7f24941bc87bdb02ca9bf8ade0/assets/screenshots/screen-20.jpg)
 
-In this example, when ISO set to 100 and apperture to F8, camera meter should show speed 1/125.
+In this example, K Value is 14.03 and EV Shift is +1EV, so the luminance value on a screen should be 8.98 cd/m^2. When ISO set to 100 and apperture to F8, camera equipped with LDR meter and calibrated to K14.03 should show speed 2s.
 
-Below is a luminance values table depending on what K Value selected in settings menu. Please note that levels are shifted by one stop. This is because older cameras with celenium or LDR photoelements read LED light source exactly one stop lower. If you are testing modern camera with a photodiode sensors, keep in mind that you have to set Light Source one step lower.
+![](https://github.com/srozum/film_camera_tester/blob/fd1b6cfd43a40cea0739f01f470084609dd6e7c8/assets/screenshots/screen-29.jpg)
 
-|EV   | K12.5 | K14.03 |
-|---- | ----  | ----   |
-|4    | 4     | 4.49   |
-|5    | 8     | 8.98   |
-|6    | 16    | 17.96  |
-|7    | 32    | 35.92  |
-|8    | 64    | 71.8   |
-|9    | 128   | 143.65 |
-|10   | 256   | 287.3  |
-|11   | 512   | 575    |
-|12   | 1024  | 1149   |
-|13   | 2048  | 2299   |
-|14   | 4090  | 4595   |
-|15   | 8190  | 9195   |
-|16   | 16390 | 18390  |
+Below is a luminance values table depending on what K Value and EV Shift selected in settings menu.
+
+|EV   | K12.5 | K12.5 +1 | K14.03 | K14.03 +1 |
+|---- | ----  | ----     | ----   | ----      |
+|5    | 4     | 8        | 4.49   | 8.98      |
+|6    | 8     | 16       | 8.98   | 17.96     |
+|7    | 16    | 32       | 17.96  | 35.92     |
+|8    | 32    | 64       | 35.92  | 71.8      |
+|9    | 64    | 128      | 71.8   | 143.65    |
+|10   | 128   | 256      | 143.65 | 287.3     |
+|11   | 256   | 512      | 287.3  | 575       |
+|12   | 512   | 1024     | 575    | 1149      |
+|13   | 1024  | 2048     | 1149   | 2299      |
+|14   | 2048  | 4090     | 2299   | 4595      |
+|15   | 4090  | 8190     | 4595   | 9195      |
+|16   | 8190  | 16390    | 9195   | 18390     |
+
 
 > To use this mode Light Unit #2 should be connected to the Tester.
+
+
+
+
+
+

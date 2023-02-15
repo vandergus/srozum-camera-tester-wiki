@@ -1,3 +1,81 @@
+This is Operation Manual for the Film Camera Tester running on Firmware **v2.8**. It has following test modes implemented:
+
+- [Simple Shutters](#simple-shutters)
+- [Focal Vertical](#focal-vertical--horizontal)
+- [Focal Horizontal](#focal-vertical--horizontal)
+- [Light Source](#light-source)
+- [Exposure Error](#exposure-error)
+- [Average Series](#average-series)
+- [Flash Sync Simple](#flash-sync-simple)
+- [Flash Sync Focal](#flash-sync-focal)
+- [Leaf Efficiency](#leaf-efficiency)
+
+## Selecting a Mode
+
+To select the Test Mode press the "Mode" button. Using a rotary encoder knob select which mode you want to run, and confirm your selection by pressing the knob.
+
+Then, depending on the selected Mode and type of camera you are testing, connect a required sensor. Most of the time you'll use Sensor #1.
+
+> **Although Tester supports sensors hot-swap, it is recommended to power off the Tester when connecting or disconnecting sensors**
+
+When the correct sensor is connected,  and the Tester is ready to take measurements, you'll see "Press Start" on the screen. Otherwise, it will tell "Not Ready".
+
+![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-1.jpg)
+
+The first row of the screen is a Status Bar. It tells you what sensors are connected to the Sockets A and B, the short name of selected Test Mode, and on a righthand of a line, there is an indicator of a selector for a primary setting of the Mode.
+
+
+## Settings Menu
+
+The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM memory.
+
+![](https://github.com/srozum/film_camera_tester/blob/0dc2f6d4f6b30f7b3b05398507d5e208c369ef96/assets/screenshots/screen-14.jpg)
+
+**K Value** lets you select value of calibration constant K between 12.5 and 14.03. It switches Light Source output according to calibration tables.
+
+**Frame Width** sets the target distance used to present curtains travel times. Curtains travel time can be presented as it was measured at a distance between far-most openings of a Sensor, or re-calculated over distance whichever is specified in service manual for a tested camera.
+
+For example, the service manual for a Pentax K1000 says that the edge-to-edge travel time should be 14ms, or 13.3ms over the distance of 34mm, or 12.5ms over the distance of 32mm. But more common to see travel times specified as edge-to-edge. Since the horizontal distance between the far most photodiodes of a Sensor #1 is 32mm,  it is required to do some simple math to find out the travel time over the target distance vs the sensor's space. By setting the "Frame Width", results of focal plane shutter Test Modes will be automatically re-calculated for a set distance.
+
+> The Tester automatically detects connected Sensor and thus knows what is a distance between photodiodes.
+
+**Frame Height** similar to "Frame Width" but applying to focal plane shutters with vertical curtains travel direction.
+
+**Speeds Range** lets you select between three sets of standard shutter speeds, depending on what camera you are testing - "New" (with speeds marked as 1/60, 1/125, etc.), "Old" (with speeds like 1/50, 1/100) or "Log" (with speeds like 1/128, 1/512).
+
+- "New" range goes from 8s speed to 1/8000.
+- "Old" range goes from 1s to 1/1000.
+- "Log" range goes from 8s speed to 1/8000. Speeds are power of 2, for testing electronic cameras controlled by MCU.
+
+**Test Series** sets the number of how many tests should be taken in average measuring modes before calculating and displaying the summary results.
+
+- Choises are 3, 5, 10, or 20 tests in a series.
+
+**Sound On/Off** enables or disables buzzer sounds.
+
+To change settings in Settings Menu press the "Menu" button. Using a rotary encoder knob select which setting you want to edit and push the knob. Blinking symbol will appear next to the value, and you can change it by rotating a retary encoder knob. Pressing it again will store the selected value in a memory. To exit the Settings Menu, scroll down to the end of a list and select "Exit menu" item.
+
+## Taking Measurements
+
+Open the camera back and place the Sensor into a frame opening. For the cameras with focal-plane shutters, the orientation of a Sensor doesn't matter since the Tester automatically detects the direction of the curtains.
+
+> Sensor #1 has a thread mount on its back in case you want to build a rig for holding it in an upright position.
+
+> Sensor #2 has a "+" symbol on its back to help position it in a center of a frame in case of testing half-frame cameras.
+
+For time-based tests, when testing cameras with a detachable lens it is recommended to remove the lens, otherwise set the aperture wide open.
+
+Turn on the Light Source, unless it is a Light Unit controlled by the Tester, and place camera in front of it approximately 5-10cm away.
+
+For light integrating tests, set lens at infinity (also remove any filters if present), and place camera directly against the Light Unit screen so that it covers the whole field of view of a lens and a light meter, in case of point-and-shoot type of camera.
+
+When ready, press the "Start" button. At this moment the Tester should say "Running..." which means it is waiting for a shutter to be fired. Fire the shutter and if the test was successful you'll hear the "beep" and results will be printed on a screen immediately.
+
+In all modes, except "Average Series", once the first test was taken and results were printed, you will no see "Running...", instead continue taking tests and fresh results will be displayed on a screen.
+
+To change the Test Mode or Settings, press "Stop". Because during the Test all other controls are disabled.
+
+
 ## Simple Shutters
 
 This basic mode allows you to quickly test cameras with shutters of different types at various speeds. It continuously measures exposure time and calculates an exposure error between measured and target speed. The target speed is either detected automatically as the nearest standard speed when the selector is set to "Auto", or the selected value is used.
@@ -17,27 +95,6 @@ When testing simple or leaf shutters the measured exposure time at the center of
 > More about measuring efficiency you can read below in "Leaf Efficiency" mode description.
 
 > Some old cameras have maximum aperture of f/4 of smaller. This, in combination with a big distance between lens and a focal plane where the sensor is placed, may cause problems during the tests. In this case, try to use powerfull flashlight instead of a built-in Light Unit.
-
-### Efficiency interpolation for leaf shutters of size #00 and #0
-
-In Firmware update 2.7 a feature specifically designed to help you while testing or adjusting leaf shutters of size #00 and #0 (17-24mm aperture) was added. I've collected efficiency data of various recently serviced shutters, like Prontor, Compur, Synchro-Compur, Seikosha, Copal, etc. This data is used to build realistic "efficiency curve", and to interpolate effective speed of the shutter in test.
-
-On screenshots below you can see measurements results of a Yashica Lynx-5000 shutter set at 1/500 and 1/1000 respectively. Yashica Lynx-5000 one of the few cameras which shutter has reinforced blades and able to reach speeds as high as 1/1000, with open/close time as fast as 0.7ms. As you can see, tester does a good job by estimating effective speed based on a time measured at the center of a frame. However, it's up to you how you interpret the results.
-
-
-![](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/screenshots/screen-22.jpg)
-
-![](https://github.com/srozum/film_camera_tester/blob/fe5e2ac161eaef862774993a3b3540340639f97e/assets/screenshots/screen-23.jpg)
-
-Results displayed on a screen:
-
-- **"T"** - measured exposure time. Automatically formatted in s/ms/µs.
-- **"S"** - measured shutter speed (time presented in a form "one over").
-- **"Eff"** - shutter efficiency calculated using logarithmic interpolation and "effcicency curve" data.
-- **"S"** - effective shutter speed calculated based on measured time and estimated efficiency.
-- **"Er"** - calculated exposure error between measured and target speed. The target speed is either detected automatically as the nearest to effective speed, or the selected value is used.
-
-> This feature is only present in Firmware 2.7 and was removed in v2.8 to free some memory for "Exposure Error" mode. Version 2.7 was released anyways for those who are not going to build full system which includes a Light Unit.
 
 ## Focal Vertical / Horizontal
 
@@ -242,6 +299,24 @@ Selector sets brightness of a Light Source within 4-16EV range according to sele
 ![](https://github.com/srozum/film_camera_tester/blob/2ea1c309da684a7f24941bc87bdb02ca9bf8ade0/assets/screenshots/screen-20.jpg)
 
 In this example, when ISO set to 100 and apperture to F8, camera meter should show speed 1/125.
+
+Below is a luminance values table depending on what K Value selected in settings menu. This is because older cameras with celenium or LDR photoelements read LED light source exactly one stop lower. If you are testing modern camera with a photodiode sensors, keep in mind that you have to set Light Source one step lower.
+
+|EV   | K12.5 | K14.03 |
+|---- | ----  | ----   |
+|4    | 4     | 4.49   |
+|5    | 8     | 8.98   |
+|6    | 16    | 17.96  |
+|7    | 32    | 35.92  |
+|8    | 64    | 71.8   |
+|9    | 128   | 143.65 |
+|10   | 256   | 287.3  |
+|11   | 512   | 575    |
+|12   | 1024  | 1149   |
+|13   | 2048  | 2299   |
+|14   | 4090  | 4595   |
+|15   | 8190  | 9195   |
+|16   | 16390 | 18390  |
 
 > To use this mode Light Unit #2 should be connected to the Tester.
 
