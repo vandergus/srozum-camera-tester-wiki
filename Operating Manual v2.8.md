@@ -4,7 +4,7 @@ This is Operation Manual for the Film Camera Tester running on Firmware **v2.8**
 - [Focal Vertical](#focal-vertical--horizontal)
 - [Focal Horizontal](#focal-vertical--horizontal)
 - [Light Source](#light-source)
-- [Exposure Error](#exposure-error)
+- [Exposure Error](#exposure-error-ee)
 - [Average Series](#average-series)
 - [Flash Sync Simple](#flash-sync-simple)
 - [Flash Sync Focal](#flash-sync-focal)
@@ -166,7 +166,7 @@ In this mode, using Sensor #6, you can measure difference between nominal exposu
 
 Start the Mode. Using selector set brightness of a Light Source within 4-16EV. On a camera, if testing in manual mode, set aperture and shutter speed according to selected light level and fire the shutter. When testing either fully automatic or aperture/shutter priority cameras, set ISO at 100.
 
-![](![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-27.jpg))
+![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-27.jpg)
 
 Results displayed on a screen:
 

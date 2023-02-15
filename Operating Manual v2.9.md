@@ -4,7 +4,7 @@ This is Operation Manual for the Film Camera Tester running on Firmware **v2.8**
 - [Focal Vertical](#focal-vertical--horizontal)
 - [Focal Horizontal](#focal-vertical--horizontal)
 - [Light Source](#light-source)
-- [Exposure Error](#exposure-error)
+- [Exposure Error](#exposure-error-ee)
 - [Average Series](#average-series)
 - [Flash Sync Simple](#flash-sync-simple)
 - [Flash Sync Focal](#flash-sync-focal)
@@ -173,7 +173,7 @@ Start the Mode, using selector set brightness of a Light Source within 5-16EV. O
 
 When testing either fully automatic or aperture/shutter priority cameras, camera should be set at ISO 100, and Light Source settings, like K Value and EV Shift, should be set accroding to the type of Light Meter built into a camera.
 
-![](![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-27.jpg))
+![](https://github.com/srozum/film_camera_tester/blob/7ca201229360f6b6b0089c9e380d671cbb4ea2b3/assets/screenshots/screen-27.jpg)
 
 Results displayed on a screen:
 
