@@ -92,6 +92,7 @@
 - Light Unit #2 Control Board Rev.3
   - PCB / Light Unit #2 Rev.3
   - LD24AJTA (based on PT4115) LED Driver.
+    - Rcs 0.91 Ohm
     - [Datasheet](https://github.com/srozum/film_camera_tester/blob/ff70038ed548a19df9affb2cfab41a057fedca4c/assets/datasheets/PT4115E.pdf)
   - Header Pin Connector 6P M as LED driver mounts
   - 2N2222A TO-92 NPN Transistor

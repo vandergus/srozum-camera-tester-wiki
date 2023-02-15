@@ -10,7 +10,7 @@
   - Automatically re-calculates curtains travel time according to selected frame width or height.
 - Measures delays between flash contact and shutter opening.
   - Automatically identifies X, M, or FP modes.
-- Takes a series of measurements, and calculates average stats.
+- Takes a series of measurements, and calculates average values.
   - Number of tests in series can be selected in the Settings menu between 3, 5, 10, or 20.
 - Allows to measure efficiency thus effective speed of a leaf shutters from size #00 and bigger.
 - Automatically detects the type of connected Sensors, and notifies you if wrong sensor is connected for a specific Mode.
@@ -30,7 +30,7 @@
   - ±0.05EV within 6-14EV range, although full range 4-16EV of a Light Unit can be used during the tests.
   - Resolution 0.01EV
 - Light Source
-  - brightness is adjustable within 4-16EV range
+  - brightness is adjustable within 5-16EV range
   - brightness levels can be switched between K12.5 and K14.03.
   - Calibration accuracy: 5%
   - Color temperature varies within 2800K and 5000K

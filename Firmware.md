@@ -1,8 +1,6 @@
-I continue to work on new features and improvements received thanks to your feedback, and new versions of a Firmware are published time from time.
-
 You don't have to buy new Nano board every time new version of firmware is published, instead you could upgrade your Tester yourself by simply uploading new version into your board.
 
-Uploading new firmware to Arduino Nano board is similar to uploading any sketch, but there is a trick. The thing is, the firmware takes so much space (v2.5 uses 31380 bytes of flash memory, for example) that it doesn't fit into regular Nano board.
+Uploading new firmware to Arduino Nano board is similar to uploading any sketch, but there is a trick. The thing is, the firmware takes so much space that it doesn't fit into regular Nano board. For example, v2.5 uses 31380 bytes of flash memory.
 
 What I mean by "regular" Nano?
 

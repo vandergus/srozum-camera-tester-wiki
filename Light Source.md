@@ -15,7 +15,7 @@ The schematic is very simple. Basically, you can connect anything what can be co
 
 "Light Unit #2" has special optic-electric design to satisfy requirements for standard light source used to test and adjust photometric light meters. It provides evenly illuminated surface, and it's brightness can be controlled within a wide range with good precision.
 
-- EV values: 4..16 in two ranges for K12.5 and K14.03
+- EV values: 5..16 in two ranges for K12.5 and K14.03
 - Calibration accuracy: 5%
 - Unevennes of the screen luminance within 10%
 - LED light source, analog of Cree XHP 70.2
@@ -27,27 +27,42 @@ The schematic is very simple. Basically, you can connect anything what can be co
 
 For proper functioning, your Film Camera Tester should run firmware version [2.5](https://github.com/srozum/film_camera_tester/releases/tag/2.5) or higher.
 
-Accuracy of the light output greatly depends on a quality of a power supply. It is recommended to use 12V 2A (or higher) power supply like "Mean Well" or similar, where output voltage can be finely adjusted within +/-1V. When connected, adjust power supply voltage to exactly 12.5V, and make sure it stays the same whether Light Unit is on or off. Check the light value at EV12/K12.5 using an illumimnance meter or light meter (also calibrated at K12.5), and adjust voltage if needed.
+Accuracy of the light output greatly depends on a quality of a power supply. It is recommended to use 12V 2A (or higher) power supply like "Mean Well" or similar, where output voltage can be finely adjusted within +/-1V.
+
+Because of the Color Correction Factor of LED, old light meters like celenium meters, photoresistors or LDR, and some photodiodes read exactly 1 stop lower. More modern light meters, including digital cameras, read LED lights correctly.
+
+> Big thanks to Peter Woodford who did numerous tests and helped to identify behaviour of various light meters.
 
 Calibration was done using a Luminance meter with a probe placed directly against the screen. Below is a table of measured luminance (cd/m2) on a surface of the screen.
 
 
-|EV   | K12.5  | K14.03|
-|---- | ----   | ----  |
-|4    | 4      | 4.49  |
-|5    | 8      | 8.98  |
-|6    | 16     | 17.96 |
-|7    | 32     | 35.92 |
-|8    | 64     | 71.8  |
-|9    | 128    | 143.65|
-|10   | 256    | 287.3 |
-|11   | 512    | 575   |
-|12   | 1024   | 1149  |
-|13   | 2048   | 2299  |
-|14   | 4090   | 4595  |
-|15   | 8190   | 9195  |
-|16   | 16390  | 18390 |
+|EV   | K12.5 | K12.5 +1 | K14.03 | K14.03 +1 |
+|---- | ----  | ----     | ----   | ----      |
+|5    | 4     | 8        | 4.49   | 8.98      |
+|6    | 8     | 16       | 8.98   | 17.96     |
+|7    | 16    | 32       | 17.96  | 35.92     |
+|8    | 32    | 64       | 35.92  | 71.8      |
+|9    | 64    | 128      | 71.8   | 143.65    |
+|10   | 128   | 256      | 143.65 | 287.3     |
+|11   | 256   | 512      | 287.3  | 575       |
+|12   | 512   | 1024     | 575    | 1149      |
+|13   | 1024  | 2048     | 1149   | 2299      |
+|14   | 2048  | 4090     | 2299   | 4595      |
+|15   | 4090  | 8190     | 4595   | 9195      |
+|16   | 8190  | 16390    | 9195   | 18390     |
 
+> "+1" luminance values for older light meters
 
+### Calibration
 
-> Because of the Color Correction Factor of LED, some light meters (mostly of modern electronic cameras) might read exactly 1 stop higher.
+After assembling the Tester, Light Unit have to be calibrated by adjusting the voltage of a power source. You'll need a luminance meter or you can use any light meter with good resolution, but you have to know it's type and calibration constant.
+
+- Adjust power supply voltage to exactly 12.5V. While adjusting the voltage be carefull to not exceed 13V or you can damage componets of the Tester!
+- In settings select light mode level which corresponds to your light meter calibration contsant. If you are using luminance meter select K12.5.
+- Set Tester in a "Light Source" mode, select light level 12 and turn it on.
+- Place probe of a luminance meter directly against the screen at the center. Try to avoid moving it during calibration.
+- Adjust voltage of power supply so the meter reads 512 cd/m^2 or slightly above. If you are using reflective light meter it should read 12EV.
+- Once EV12 is calibrated correctly the rest of EV values should align properly. However, small variation in linearity is possible due differences in manufacturing tolerances of electronic components.
+
+> If you don't have a proper light meter, adjust power supply voltage to exactly 12.5V and it should be good enough.
+
