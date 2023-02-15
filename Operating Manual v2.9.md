@@ -1,4 +1,4 @@
-This is Operation Manual for the Film Camera Tester running on Firmware **v2.8**. It has following test modes implemented:
+This is Operation Manual for the Film Camera Tester running on Firmware **v2.9**. It has following test modes implemented:
 
 - [Simple Shutters](#simple-shutters)
 - [Focal Vertical](#focal-vertical--horizontal)
@@ -301,7 +301,13 @@ Example of measuring effective speed of a Synchro-Compur (Kodak Retina Reflex II
 
 In this mode you can test accuracy of a hand held light meters or light meters built into a cameras.
 
-Selector sets brightness of a Light Source within 5-16EV range according to selected K value. Display prompts what meter readings or camera settings could be with set level of brightness.
+Because of the Color Correction Factor of LED, old light meters like celenium meters, photoresistors or LDR, and some photodiodes read exactly 1 stop lower. More modern light meters, including digital cameras, read LED lights correctly.
+
+Thus, to avoid confusion, in Firmware v2.9 the new "EV Shift" settings menu item was added. Before testing the camera or light meter you have to identify what type of photodetector it uses and set Light Source EV Shift accordingly.
+
+> Big thanks to Peter Woodford who did numerous tests and helped to identify behaviour of various light meters.
+
+Selector sets brightness of a Light Source within 5-16EV range according to selected K Value and EV Shift. Display prompts what meter readings or camera settings could be with set level of brightness.
 
 In this example, K Value is 12.5 and EV Shift is 0EV, so the luminance value on a screen should be 1024 cd/m^2. When ISO set to 100 and apperture to F8, camera equipped with photodiode meter and calibrated to K12.5 should show speed 1/125.
 
