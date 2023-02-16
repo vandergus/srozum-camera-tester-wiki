@@ -29,7 +29,7 @@ For proper functioning, your Film Camera Tester should run firmware version [2.5
 
 Accuracy of the light output greatly depends on a quality of a power supply. It is recommended to use 12V 2A (or higher) power supply like "Mean Well" or similar, where output voltage can be finely adjusted within +/-1V.
 
-Because of the Color Correction Factor of LED, old light meters like celenium meters, photoresistors or LDR, and some photodiodes read exactly 1 stop lower. More modern light meters, including digital cameras, read LED lights correctly.
+Because of the Color Correction Factor of LED, old light meters like selenium meters, photoresistors or LDR, and some photodiodes read exactly 1 stop lower. More modern light meters, including digital cameras, read LED lights correctly.
 
 > Big thanks to Peter Woodford who did numerous tests and helped to identify behaviour of various light meters.
 

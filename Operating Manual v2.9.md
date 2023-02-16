@@ -35,7 +35,7 @@ The Camera Tester has a Settings Menu for the items,  which are stored in EEPROM
 
 **EV Shift** lets you select Light Source brightness levels shifted between "0EV" and "+1EV" depending on what type of light meter you are testing.
 
-If camera in test uses celenium or LDR photoelements you want to set "+1EV" to avoid confusing during the tests. What it basically means, is that in "+1EV" mode while you change Light Source brightness between 5..16EV, the actual brightness of a Light Source is 6..17EV. But because of old light meters read LED light 1 stop lower, both Light Meter readings and brigntess level indicated by the Tester will align.
+If camera in test uses selenium or LDR photoelements you want to set "+1EV" to avoid confusing during the tests. What it basically means, is that in "+1EV" mode while you change Light Source brightness between 5..16EV, the actual brightness of a Light Source is 6..17EV. But because of old light meters read LED light 1 stop lower, both Light Meter readings and brigntess level indicated by the Tester will align.
 
 **Frame Width** sets the target distance used to present curtains travel times. Curtains travel time can be presented as it was measured at a distance between far-most openings of a Sensor, or re-calculated over distance whichever is specified in service manual for a tested camera.
 
@@ -165,7 +165,7 @@ Left column shows results for opening curtain and right column is closing curtai
 
 In this mode you can test accuracy of a hand held light meters or light meters built into a cameras.
 
-Because of the Color Correction Factor of LED, old light meters like celenium meters, photoresistors or LDR, and some photodiodes read exactly 1 stop lower. More modern light meters, including digital cameras, read LED lights correctly.
+Because of the Color Correction Factor of LED, old light meters like selenium meters, photoresistors or LDR, and some photodiodes read exactly 1 stop lower. More modern light meters, including digital cameras, read LED lights correctly.
 
 Thus, to avoid confusion, in Firmware v2.9 the new "EV Shift" settings menu item was added. Before testing the camera or light meter you have to identify what type of photodetector it uses and set Light Source EV Shift accordingly.
 

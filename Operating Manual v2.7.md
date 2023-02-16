@@ -268,7 +268,7 @@ Selector sets brightness of a Light Source within 4-16EV range according to sele
 
 In this example, when ISO set to 100 and apperture to F8, camera meter should show speed 1/125.
 
-Below is a luminance values table depending on what K Value selected in settings menu. Please note that levels are shifted by one stop. This is because older cameras with celenium or LDR photoelements read LED light source exactly one stop lower. If you are testing modern camera with a photodiode sensors, keep in mind that you have to set Light Source one step lower.
+Below is a luminance values table depending on what K Value selected in settings menu. Please note that levels are shifted by one stop. This is because older cameras with selenium or LDR photoelements read LED light source exactly one stop lower. If you are testing modern camera with a photodiode sensors, keep in mind that you have to set Light Source one step lower.
 
 |EV   | K12.5 | K14.03 |
 |---- | ----  | ----   |
