@@ -39,10 +39,11 @@
 - Sensor PCB
   - V1 has 32x22mm spacing between outmost phodotiodes
   - V2 has 32x20mm spacing
-- Photodiode SIC553-04 x3
-  - Light To Logic converter. This is what used in those "Laser Sensor" modules.
+- Light To Logic converter Photo IC (photodiode with integrated amplifier and schmitt trigger) x3
   - ![Laser Sensor](https://github.com/srozum/film_camera_tester/blob/ff70038ed548a19df9affb2cfab41a057fedca4c/assets/images/laser%20sensor%20module.jpeg)
-  - [Datasheet](https://github.com/srozum/film_camera_tester/blob/ff70038ed548a19df9affb2cfab41a057fedca4c/assets/datasheets/SIC553-04.pdf)
+  - [SIC553-04](https://github.com/srozum/film_camera_tester/blob/ff70038ed548a19df9affb2cfab41a057fedca4c/assets/datasheets/SIC553-04.pdf) made by Kodenshi Corp., this is what originally was used in those "Laser Sensor" modules.
+  - [PIC0903SL](https://github.com/srozum/film_camera_tester/blob/25081f90891dfd4f507b88cfab1606393add9a17/assets/datasheets/PIC0903SL-KODENSHI.pdf) is a new version of SIC553-04 also made by Kodenshi.
+  - However, if your Tester registers dark time instead of light time, it means that you've got a module version equipped with [PIC0103SL](https://github.com/srozum/film_camera_tester/blob/25081f90891dfd4f507b88cfab1606393add9a17/assets/datasheets/PIC0103SL-KODENSHI.pdf). It uses same schematics, and product photos are the same, but output signal is reversed. In such case simply use Firmware v2.9.1 were sensor readings inverted.
 - 3D Printed Enclosure parts (face plate, body and a lid)
 - 2x6mm Tapping Screw x2
 - Zip Tie
@@ -55,7 +56,7 @@
 ## Sensor #2 (Simple Sensor)
 
 - Sensor PCB V2
-- Photodiode SIC553-04
+- Light To Logic converter Photo IC (photodiode with integrated amplifier and schmitt trigger) PIC0903SL (SIC553-04 old part name) or PIC0103SL
 - 3D Printed Enclosure parts (body and a lid)
 - 3D Printed Medium Format Adapter
 - Socket GX16x6 Male
