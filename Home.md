@@ -1,10 +1,6 @@
 ![](https://github.com/srozum/film_camera_tester/blob/596732486f047422b243e279404cc8ec0cb5f984/assets/images/product-small-1.jpg)
 
 
-If you like this project, want to see it developing, or just feeling generous, consider buying me a beer
-
-<a href="https://paypal.me/srozum/"><img src="https://github.com/srozum/film_camera_tester/blob/3c81342d43bd7a031382ca305fd3a457b7674068/assets/blue.svg" height="40"></a>
-
 ## Features
 
 - Measures actual exposure at the film plane, which allows to test fully automatic, aperture or shutter priority cameras.
